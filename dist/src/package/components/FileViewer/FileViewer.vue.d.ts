@@ -1,4 +1,4 @@
-import { FileRef, FileViewerOptions } from '../../common/type';
+import { FileRef, FileViewerLifecycleContext, FileViewerOptions, FileViewerOperationContext } from '../../common/type';
 type __VLS_Props = {
     /**
      * 本地二进制输入。优先级高于 `url`。
@@ -21,6 +21,20 @@ type __VLS_Props = {
      */
     options?: FileViewerOptions;
 };
-declare const __VLS_export: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<__VLS_Props> & Readonly<{}>, {}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;
+declare const __VLS_export: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {} & {
+    "load-start": (context: FileViewerLifecycleContext) => any;
+    "load-complete": (context: FileViewerLifecycleContext) => any;
+    "unload-start": (context: FileViewerLifecycleContext) => any;
+    "unload-complete": (context: FileViewerLifecycleContext) => any;
+    "operation-before": (context: FileViewerOperationContext) => any;
+    "operation-cancel": (context: FileViewerOperationContext) => any;
+}, string, import('vue').PublicProps, Readonly<__VLS_Props> & Readonly<{
+    "onLoad-start"?: ((context: FileViewerLifecycleContext) => any) | undefined;
+    "onLoad-complete"?: ((context: FileViewerLifecycleContext) => any) | undefined;
+    "onUnload-start"?: ((context: FileViewerLifecycleContext) => any) | undefined;
+    "onUnload-complete"?: ((context: FileViewerLifecycleContext) => any) | undefined;
+    "onOperation-before"?: ((context: FileViewerOperationContext) => any) | undefined;
+    "onOperation-cancel"?: ((context: FileViewerOperationContext) => any) | undefined;
+}>, {}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;
 declare const _default: typeof __VLS_export;
 export default _default;
