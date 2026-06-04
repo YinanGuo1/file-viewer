@@ -1,6 +1,8 @@
 import { Column, ConfigType } from 'e-virt-table';
 import { SheetModel } from './worker/type';
 import { CellStyleCache, SheetDefaults, VirtualSheetState } from './XlsxTable.state';
+export declare const INDEX_COLUMN_WIDTH = 68;
+export declare const HEADER_HEIGHT = 34;
 interface TableConfigOptions {
     hostHeight: number;
     sheetDefaults: SheetDefaults;

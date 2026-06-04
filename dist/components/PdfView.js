@@ -49,7 +49,7 @@ function N(e, t, n) {
 }
 //#endregion
 //#region node_modules/.pnpm/pdfjs-dist@5.7.284/node_modules/pdfjs-dist/legacy/build/pdf.mjs
-var ee, P, F, te, I, ne, re, ie, ae, oe, se, ce, le, ue, de, fe, pe, me, he = {
+var ee, P, te, ne, F, re, ie, ae, oe, I, se, ce, le, ue, de, fe, pe, me, he = {
 	9306(e, t, n) {
 		var r = n(4901), i = n(6823), a = TypeError;
 		e.exports = function(e) {
@@ -168,7 +168,7 @@ var ee, P, F, te, I, ne, re, ie, ae, oe, se, ce, le, ue, de, fe, pe, me, he = {
 		};
 	},
 	4644(e, t, n) {
-		var r = n(7811), i = n(3724), a = n(4576), o = n(4901), s = n(34), c = n(9297), l = n(6955), u = n(6823), d = n(6699), f = n(6840), p = n(2106), m = n(1625), h = n(2787), g = n(2967), _ = n(608), v = n(3392), y = n(1181), b = y.enforce, x = y.get, S = a.Int8Array, C = S && S.prototype, w = a.Uint8ClampedArray, T = w && w.prototype, E = S && h(S), D = C && h(C), O = Object.prototype, k = a.TypeError, A = _("toStringTag"), j = v("TYPED_ARRAY_TAG"), M = "TypedArrayConstructor", N = r && !!g && l(a.opera) !== "Opera", ee = !1, P, F, te, I = {
+		var r = n(7811), i = n(3724), a = n(4576), o = n(4901), s = n(34), c = n(9297), l = n(6955), u = n(6823), d = n(6699), f = n(6840), p = n(2106), m = n(1625), h = n(2787), g = n(2967), _ = n(608), v = n(3392), y = n(1181), b = y.enforce, x = y.get, S = a.Int8Array, C = S && S.prototype, w = a.Uint8ClampedArray, T = w && w.prototype, E = S && h(S), D = C && h(C), O = Object.prototype, k = a.TypeError, A = _("toStringTag"), j = v("TYPED_ARRAY_TAG"), M = "TypedArrayConstructor", N = r && !!g && l(a.opera) !== "Opera", ee = !1, P, te, ne, F = {
 			Int8Array: 1,
 			Uint8Array: 1,
 			Uint8ClampedArray: 1,
@@ -178,32 +178,32 @@ var ee, P, F, te, I, ne, re, ie, ae, oe, se, ce, le, ue, de, fe, pe, me, he = {
 			Uint32Array: 4,
 			Float32Array: 4,
 			Float64Array: 8
-		}, ne = {
+		}, re = {
 			BigInt64Array: 8,
 			BigUint64Array: 8
-		}, re = function(e) {
+		}, ie = function(e) {
 			if (!s(e)) return !1;
 			var t = l(e);
-			return t === "DataView" || c(I, t) || c(ne, t);
-		}, ie = function(e) {
+			return t === "DataView" || c(F, t) || c(re, t);
+		}, ae = function(e) {
 			var t = h(e);
 			if (s(t)) {
 				var n = x(t);
-				return n && c(n, M) ? n[M] : ie(t);
+				return n && c(n, M) ? n[M] : ae(t);
 			}
-		}, ae = function(e) {
+		}, oe = function(e) {
 			if (!s(e)) return !1;
 			var t = l(e);
-			return c(I, t) || c(ne, t);
-		}, oe = function(e) {
-			if (ae(e)) return e;
+			return c(F, t) || c(re, t);
+		}, I = function(e) {
+			if (oe(e)) return e;
 			throw new k("Target is not a typed array");
 		}, se = function(e) {
 			if (o(e) && (!g || m(E, e))) return e;
 			throw new k(u(e) + " is not a typed array constructor");
 		}, ce = function(e, t, n, r) {
 			if (i) {
-				if (n) for (var o in I) {
+				if (n) for (var o in F) {
 					var s = a[o];
 					if (s && c(s.prototype, e)) try {
 						delete s.prototype[e];
@@ -220,7 +220,7 @@ var ee, P, F, te, I, ne, re, ie, ae, oe, se, ce, le, ue, de, fe, pe, me, he = {
 			if (i) {
 				if (g) {
 					if (n) {
-						for (r in I) if (o = a[r], o && c(o, e)) try {
+						for (r in F) if (o = a[r], o && c(o, e)) try {
 							delete o[e];
 						} catch (e) {}
 					}
@@ -229,31 +229,31 @@ var ee, P, F, te, I, ne, re, ie, ae, oe, se, ce, le, ue, de, fe, pe, me, he = {
 					} catch (e) {}
 					else return;
 				}
-				for (r in I) o = a[r], o && (!o[e] || n) && f(o, e, t);
+				for (r in F) o = a[r], o && (!o[e] || n) && f(o, e, t);
 			}
 		};
-		for (P in I) F = a[P], te = F && F.prototype, te ? b(te)[M] = F : N = !1;
-		for (P in ne) F = a[P], te = F && F.prototype, te && (b(te)[M] = F);
+		for (P in F) te = a[P], ne = te && te.prototype, ne ? b(ne)[M] = te : N = !1;
+		for (P in re) te = a[P], ne = te && te.prototype, ne && (b(ne)[M] = te);
 		if ((!N || !o(E) || E === Function.prototype) && (E = function() {
 			throw new k("Incorrect invocation");
-		}, N)) for (P in I) a[P] && g(a[P], E);
-		if ((!N || !D || D === O) && (D = E.prototype, N)) for (P in I) a[P] && g(a[P].prototype, D);
+		}, N)) for (P in F) a[P] && g(a[P], E);
+		if ((!N || !D || D === O) && (D = E.prototype, N)) for (P in F) a[P] && g(a[P].prototype, D);
 		if (N && h(T) !== D && g(T, D), i && !c(D, A)) for (P in ee = !0, p(D, A, {
 			configurable: !0,
 			get: function() {
 				return s(this) ? this[j] : void 0;
 			}
-		}), I) a[P] && d(a[P].prototype, j, P);
+		}), F) a[P] && d(a[P].prototype, j, P);
 		e.exports = {
 			NATIVE_ARRAY_BUFFER_VIEWS: N,
 			TYPED_ARRAY_TAG: ee && j,
-			aTypedArray: oe,
+			aTypedArray: I,
 			aTypedArrayConstructor: se,
 			exportTypedArrayMethod: ce,
 			exportTypedArrayStaticMethod: le,
-			getTypedArrayConstructor: ie,
-			isView: re,
-			isTypedArray: ae,
+			getTypedArrayConstructor: ae,
+			isView: ie,
+			isTypedArray: oe,
 			TypedArray: E,
 			TypedArrayPrototype: D
 		};
@@ -2146,31 +2146,31 @@ var ee, P, F, te, I, ne, re, ie, ae, oe, se, ce, le, ue, de, fe, pe, me, he = {
 	9112(e, t, n) {
 		var r = n(6518), i = n(3724), a = n(4576), o = n(7751), s = n(9504), c = n(9565), l = n(4901), u = n(34), d = n(4376), f = n(9297), p = n(655), m = n(6198), h = n(4659), g = n(9039), _ = n(8235), v = n(4495), y = a.JSON, b = a.Number, x = a.SyntaxError, S = y && y.parse, C = o("Object", "keys"), w = Object.getOwnPropertyDescriptor, T = s("".charAt), E = s("".slice), D = s(/./.exec), O = s([].push), k = /^\d$/, A = /^[1-9]$/, j = /^[\d-]$/, M = /^[\t\n\r ]$/, N = 0, ee = 1, P = function(e, t) {
 			e = p(e);
-			var n = new ne(e, 0, ""), r = n.parse(), i = r.value, a = n.skip(M, r.end);
+			var n = new re(e, 0, ""), r = n.parse(), i = r.value, a = n.skip(M, r.end);
 			if (a < e.length) throw new x("Unexpected extra character: \"" + T(e, a) + "\" after the parsed data at: " + a);
-			return l(t) ? F({ "": i }, "", t, r) : i;
-		}, F = function(e, t, n, r) {
+			return l(t) ? te({ "": i }, "", t, r) : i;
+		}, te = function(e, t, n, r) {
 			var i = e[t], a = r && i === r.value, o = a && typeof r.source == "string" ? { source: r.source } : {}, s, l, p, h, g;
 			if (u(i)) {
 				var _ = d(i), v = a ? r.nodes : _ ? [] : {};
-				if (_) for (s = v.length, p = m(i), h = 0; h < p; h++) te(i, h, F(i, "" + h, n, h < s ? v[h] : void 0));
-				else for (l = C(i), p = m(l), h = 0; h < p; h++) g = l[h], te(i, g, F(i, g, n, f(v, g) ? v[g] : void 0));
+				if (_) for (s = v.length, p = m(i), h = 0; h < p; h++) ne(i, h, te(i, "" + h, n, h < s ? v[h] : void 0));
+				else for (l = C(i), p = m(l), h = 0; h < p; h++) g = l[h], ne(i, g, te(i, g, n, f(v, g) ? v[g] : void 0));
 			}
 			return c(n, e, t, i, o);
-		}, te = function(e, t, n) {
+		}, ne = function(e, t, n) {
 			if (i) {
 				var r = w(e, t);
 				if (r && !r.configurable) return;
 			}
 			n === void 0 ? delete e[t] : h(e, t, n);
-		}, I = function(e, t, n, r) {
+		}, F = function(e, t, n, r) {
 			this.value = e, this.end = t, this.source = n, this.nodes = r;
-		}, ne = function(e, t) {
+		}, re = function(e, t) {
 			this.source = e, this.index = t;
 		};
-		ne.prototype = {
+		re.prototype = {
 			fork: function(e) {
-				return new ne(this.source, e);
+				return new re(this.source, e);
 			},
 			parse: function() {
 				var e = this.source, t = this.skip(M, this.index), n = this.fork(t), r = T(e, t);
@@ -2186,7 +2186,7 @@ var ee, P, F, te, I, ne, re, ie, ae, oe, se, ce, le, ue, de, fe, pe, me, he = {
 				throw new x("Unexpected character: \"" + r + "\" at: " + t);
 			},
 			node: function(e, t, n, r, i) {
-				return new I(t, r, e ? null : E(this.source, n, r), i);
+				return new F(t, r, e ? null : E(this.source, n, r), i);
 			},
 			object: function() {
 				for (var e = this.source, t = this.index + 1, n = !1, r = {}, i = {}, a = !1; t < e.length;) {
@@ -2257,20 +2257,20 @@ var ee, P, F, te, I, ne, re, ie, ae, oe, se, ce, le, ue, de, fe, pe, me, he = {
 				throw new x("Unexpected character: \"" + n + "\" at: " + t);
 			}
 		};
-		var re = g(function() {
+		var ie = g(function() {
 			var e = "9007199254740993", t;
 			return S(e, function(e, n, r) {
 				t = r.source;
 			}), t !== e;
-		}), ie = v && !g(function() {
+		}), ae = v && !g(function() {
 			return 1 / S("-0 	") != -Infinity;
 		});
 		r({
 			target: "JSON",
 			stat: !0,
-			forced: re
+			forced: ie
 		}, { parse: function(e, t) {
-			return ie && !l(t) ? S(e) : P(e, t);
+			return ae && !l(t) ? S(e) : P(e, t);
 		} });
 	},
 	3110(e, t, n) {
@@ -2279,15 +2279,15 @@ var ee, P, F, te, I, ne, re, ie, ae, oe, se, ce, le, ue, de, fe, pe, me, he = {
 			return x([e]) !== "[null]" || x({ a: e }) !== "{}" || x(Object(e)) !== "{}";
 		}), P = c(function() {
 			return x("\udf06\ud834") !== "\"\\udf06\\ud834\"" || x("\udead") !== "\"\\udead\"";
-		}), F = ee ? function(e, t) {
-			var n = h(arguments), r = I(t);
+		}), te = ee ? function(e, t) {
+			var n = h(arguments), r = F(t);
 			if (!(!u(r) && (e === void 0 || f(e)))) return n[1] = function(e, t) {
 				if (u(r) && (t = o(r, this, b(e), t)), !f(t)) return t;
 			}, a(x, null, n);
-		} : x, te = function(e, t, n) {
+		} : x, ne = function(e, t, n) {
 			var r = C(n, t - 1), i = C(n, t + 1);
 			return S(A, e) && !S(j, i) || S(j, e) && !S(A, r) ? "\\u" + O(w(e, 0), 16) : e;
-		}, I = function(e) {
+		}, F = function(e) {
 			if (u(e)) return e;
 			if (l(e)) {
 				for (var t = e.length, n = [], r = 0; r < t; r++) {
@@ -2308,11 +2308,11 @@ var ee, P, F, te, I, ne, re, ie, ae, oe, se, ce, le, ue, de, fe, pe, me, he = {
 			arity: 3,
 			forced: ee || P || !y
 		}, { stringify: function(e, t, n) {
-			var r = I(t), i = [], a = F(e, function(e, t) {
+			var r = F(t), i = [], a = te(e, function(e, t) {
 				var n = u(r) ? o(r, this, b(e), t) : t;
 				return !y && d(n) ? M + (D(i, n.rawJSON) - 1) : n;
 			}, n);
-			if (typeof a != "string" || (P && (a = T(a, k, te)), y)) return a;
+			if (typeof a != "string" || (P && (a = T(a, k, ne)), y)) return a;
 			for (var s = "", c = a.length, l = 0; l < c; l++) {
 				var f = C(a, l);
 				if (f === "\"") {
@@ -4290,7 +4290,7 @@ var En = class e {
 		return e.startsWith(`image_${A(Nn, this)}_`);
 	}
 };
-F = Ln;
+te = Ln;
 function Rn(e, t) {
 	var n = this;
 	return a(function* () {
@@ -4308,7 +4308,7 @@ function Rn(e, t) {
 			});
 			let e;
 			if (typeof t == "string" ? (r.url = t, e = yield vt(t, "blob")) : t instanceof File ? e = r.file = t : t instanceof Blob && (e = t), e.type === "image/svg+xml") {
-				let t = F._isSVGFittingCanvas, n = new FileReader(), i = new Image(), o = new Promise((e, o) => {
+				let t = te._isSVGFittingCanvas, n = new FileReader(), i = new Image(), o = new Promise((e, o) => {
 					i.onload = () => {
 						r.bitmap = i, r.isSvg = !0, e();
 					}, n.onload = a(function* () {
@@ -5794,7 +5794,7 @@ var Ui = /* @__PURE__ */ new WeakMap(), Wi = /* @__PURE__ */ new WeakMap(), Gi =
 		(e = A($i, this)) == null || e.abort(), M($i, this, null), (t = A(Xi, this)) == null || t.abort(), M(Xi, this, null);
 	}
 };
-te = na;
+ne = na;
 function ra(e) {
 	var t, n;
 	if ((t = A(Ki, this)) != null && t.call(this)) return;
@@ -5846,7 +5846,7 @@ function ia(e) {
 	let [n, r] = e.touches;
 	n.identifier > r.identifier && ([n, r] = [r, n]);
 	let { screenX: i, screenY: a } = n, { screenX: o, screenY: s } = r, c = A(Qi, this), { touch0X: l, touch0Y: u, touch1X: d, touch1Y: f } = c, p = d - l, m = f - u, h = o - i, g = s - a, _ = Math.hypot(h, g) || 1, v = Math.hypot(p, m) || 1;
-	if (!A(Wi, this) && Math.abs(v - _) <= te.MIN_TOUCH_DISTANCE_TO_PINCH) return;
+	if (!A(Wi, this) && Math.abs(v - _) <= ne.MIN_TOUCH_DISTANCE_TO_PINCH) return;
 	if (c.touch0X = i, c.touch0Y = a, c.touch1X = o, c.touch1Y = s, !A(Wi, this)) {
 		M(Wi, this, !0);
 		return;
@@ -6714,7 +6714,7 @@ var oa = /* @__PURE__ */ new WeakMap(), sa = /* @__PURE__ */ new WeakMap(), ca =
 		(t == null ? void 0 : t.nodeName) === "DIV" && t.classList.contains("annotationContent") && t.remove();
 	}
 };
-I = Ma;
+F = Ma;
 function Na([e, t], n, r) {
 	[n, r] = this.screenToPageTranslation(n, r), this.x += n / e, this.y += r / t, this._onTranslating(this.x, this.y), this.fixAndSetPosition();
 }
@@ -6829,7 +6829,7 @@ function za() {
 	});
 }
 function Ba(e, t) {
-	let [n, r] = this.parentDimensions, i = this.x, a = this.y, o = this.width, s = this.height, c = I.MIN_SIZE / n, l = I.MIN_SIZE / r, u = D(W, this, Fa).call(this, this.rotation), d = (e, t) => [u[0] * e + u[2] * t, u[1] * e + u[3] * t], f = D(W, this, Fa).call(this, 360 - this.rotation), p = (e, t) => [f[0] * e + f[2] * t, f[1] * e + f[3] * t], m, h, g = !1, _ = !1;
+	let [n, r] = this.parentDimensions, i = this.x, a = this.y, o = this.width, s = this.height, c = F.MIN_SIZE / n, l = F.MIN_SIZE / r, u = D(W, this, Fa).call(this, this.rotation), d = (e, t) => [u[0] * e + u[2] * t, u[1] * e + u[3] * t], f = D(W, this, Fa).call(this, 360 - this.rotation), p = (e, t) => [f[0] * e + f[2] * t, f[1] * e + f[3] * t], m, h, g = !1, _ = !1;
 	switch (e) {
 		case "topLeft":
 			g = !0, m = (e, t) => [0, 0], h = (e, t) => [e, t];
@@ -6856,7 +6856,7 @@ function Ba(e, t) {
 			_ = !0, m = (e, t) => [0, t / 2], h = (e, t) => [e, t / 2];
 			break;
 	}
-	let v = m(o, s), y = h(o, s), b = d(...y), x = I._round(i + b[0]), S = I._round(a + b[1]), C = 1, w = 1, T, E;
+	let v = m(o, s), y = h(o, s), b = d(...y), x = F._round(i + b[0]), S = F._round(a + b[1]), C = 1, w = 1, T, E;
 	if (t.fromKeyboard) ({deltaX: T, deltaY: E} = t);
 	else {
 		let { screenX: e, screenY: n } = t, [r, i] = A(ha, this);
@@ -6866,7 +6866,7 @@ function Ba(e, t) {
 		let e = Math.hypot(o, s);
 		C = w = Math.max(Math.min(Math.hypot(y[0] - v[0] - T, y[1] - v[1] - E) / e, 1 / o, 1 / s), c / o, l / s);
 	} else _ ? C = pt(Math.abs(y[0] - v[0] - T), c, 1) / o : w = pt(Math.abs(y[1] - v[1] - E), l, 1) / s;
-	let O = I._round(o * C), k = I._round(s * w);
+	let O = F._round(o * C), k = F._round(s * w);
 	b = d(...h(O, k));
 	let j = x - b[0], N = S - b[1];
 	A(xa, this) || M(xa, this, [
@@ -6888,9 +6888,9 @@ function Va() {
 function Ha(e, t, n) {
 	let r = .7, i = n / t * r + 1 - r;
 	if (i === 1) return;
-	let a = D(W, this, Fa).call(this, this.rotation), o = (e, t) => [a[0] * e + a[2] * t, a[1] * e + a[3] * t], [s, c] = this.parentDimensions, l = this.x, u = this.y, d = this.width, f = this.height, p = I.MIN_SIZE / s, m = I.MIN_SIZE / c;
+	let a = D(W, this, Fa).call(this, this.rotation), o = (e, t) => [a[0] * e + a[2] * t, a[1] * e + a[3] * t], [s, c] = this.parentDimensions, l = this.x, u = this.y, d = this.width, f = this.height, p = F.MIN_SIZE / s, m = F.MIN_SIZE / c;
 	i = Math.max(Math.min(i, 1 / d, 1 / f), p / d, m / f);
-	let h = I._round(d * i), g = I._round(f * i);
+	let h = F._round(d * i), g = F._round(f * i);
 	if (h === d && g === f) return;
 	A(xa, this) || M(xa, this, [
 		l,
@@ -6898,7 +6898,7 @@ function Ha(e, t, n) {
 		d,
 		f
 	]);
-	let _ = o(d / 2, f / 2), v = I._round(l + _[0]), y = I._round(u + _[1]), b = o(h / 2, g / 2);
+	let _ = o(d / 2, f / 2), v = F._round(l + _[0]), y = F._round(u + _[1]), b = o(h / 2, g / 2);
 	this.x = v - b[0], this.y = y - b[1], this.width = h, this.height = g, this.setDims(), this.fixAndSetPosition(), this._onResizing();
 }
 function Ua() {
@@ -6947,7 +6947,7 @@ function Ka() {
 	this.div.addEventListener("focusin", this.focusin.bind(this), { signal: e }), this.div.addEventListener("focusout", this.focusout.bind(this), { signal: e });
 }
 function qa(e) {
-	I._resizerKeyboardManager.exec(this, e);
+	F._resizerKeyboardManager.exec(this, e);
 }
 function Ja(e) {
 	var t;
@@ -7962,7 +7962,7 @@ t(ss, "strings", [
 	"src"
 ]);
 var cs = class {};
-ne = cs, t(cs, "bools", [
+re = cs, t(cs, "bools", [
 	"black",
 	"bold",
 	"disableFontFace",
@@ -7982,7 +7982,7 @@ ne = cs, t(cs, "bools", [
 	"loadedName",
 	"mimetype",
 	"name"
-]), t(cs, "OFFSET_NUMBERS", Math.ceil(ne.bools.length * 2 / 8)), t(cs, "OFFSET_BBOX", ne.OFFSET_NUMBERS + ne.numbers.length * 8), t(cs, "OFFSET_FONT_MATRIX", ne.OFFSET_BBOX + 1 + 8), t(cs, "OFFSET_DEFAULT_VMETRICS", ne.OFFSET_FONT_MATRIX + 1 + 48), t(cs, "OFFSET_STRINGS", ne.OFFSET_DEFAULT_VMETRICS + 1 + 6);
+]), t(cs, "OFFSET_NUMBERS", Math.ceil(re.bools.length * 2 / 8)), t(cs, "OFFSET_BBOX", re.OFFSET_NUMBERS + re.numbers.length * 8), t(cs, "OFFSET_FONT_MATRIX", re.OFFSET_BBOX + 1 + 8), t(cs, "OFFSET_DEFAULT_VMETRICS", re.OFFSET_FONT_MATRIX + 1 + 48), t(cs, "OFFSET_STRINGS", re.OFFSET_DEFAULT_VMETRICS + 1 + 6);
 var ls = class {};
 t(ls, "KIND", 0), t(ls, "HAS_BBOX", 1), t(ls, "HAS_BACKGROUND", 2), t(ls, "SHADING_TYPE", 3), t(ls, "N_COORD", 4), t(ls, "N_COLOR", 8), t(ls, "N_STOP", 12), t(ls, "N_FIGURES", 16);
 var us = /* @__PURE__ */ new WeakMap(), ds = /* @__PURE__ */ new WeakMap(), fs = /* @__PURE__ */ new WeakMap(), ps = /* @__PURE__ */ new WeakSet(), ms = class {
@@ -9108,7 +9108,7 @@ function Xc(e, t, n, r, i, a, o, s) {
 	c[n * 2 + 1] > c[r * 2 + 1] && (f = n, n = r, r = f, f = a, a = o, o = f), c[r * 2 + 1] > c[i * 2 + 1] && (f = r, r = i, i = f, f = o, o = s, s = f), c[n * 2 + 1] > c[r * 2 + 1] && (f = n, n = r, r = f, f = a, a = o, o = f);
 	let p = (c[n * 2] + t.offsetX) * t.scaleX, m = (c[n * 2 + 1] + t.offsetY) * t.scaleY, h = (c[r * 2] + t.offsetX) * t.scaleX, g = (c[r * 2 + 1] + t.offsetY) * t.scaleY, _ = (c[i * 2] + t.offsetX) * t.scaleX, v = (c[i * 2 + 1] + t.offsetY) * t.scaleY;
 	if (m >= v) return;
-	let y = l[a * 4], b = l[a * 4 + 1], x = l[a * 4 + 2], S = l[o * 4], C = l[o * 4 + 1], w = l[o * 4 + 2], T = l[s * 4], E = l[s * 4 + 1], D = l[s * 4 + 2], O = Math.round(m), k = Math.round(v), A, j, M, N, ee, P, F, te;
+	let y = l[a * 4], b = l[a * 4 + 1], x = l[a * 4 + 2], S = l[o * 4], C = l[o * 4 + 1], w = l[o * 4 + 2], T = l[s * 4], E = l[s * 4 + 1], D = l[s * 4 + 2], O = Math.round(m), k = Math.round(v), A, j, M, N, ee, P, te, ne;
 	for (let e = O; e <= k; e++) {
 		if (e < g) {
 			let t = e < m ? 0 : (m - e) / (m - g);
@@ -9118,9 +9118,9 @@ function Xc(e, t, n, r, i, a, o, s) {
 			t = e > v ? 1 : g === v ? 0 : (g - e) / (g - v), A = h - (h - _) * t, j = S - (S - T) * t, M = C - (C - E) * t, N = w - (w - D) * t;
 		}
 		let t;
-		t = e < m ? 0 : e > v ? 1 : (m - e) / (m - v), ee = p - (p - _) * t, P = y - (y - T) * t, F = b - (b - E) * t, te = x - (x - D) * t;
+		t = e < m ? 0 : e > v ? 1 : (m - e) / (m - v), ee = p - (p - _) * t, P = y - (y - T) * t, te = b - (b - E) * t, ne = x - (x - D) * t;
 		let n = Math.round(Math.min(A, ee)), r = Math.round(Math.max(A, ee)), i = d * e + n * 4;
-		for (let e = n; e <= r; e++) t = (A - e) / (A - ee), t < 0 ? t = 0 : t > 1 && (t = 1), u[i++] = j - (j - P) * t | 0, u[i++] = M - (M - F) * t | 0, u[i++] = N - (N - te) * t | 0, u[i++] = 255;
+		for (let e = n; e <= r; e++) t = (A - e) / (A - ee), t < 0 ? t = 0 : t > 1 && (t = 1), u[i++] = j - (j - P) * t | 0, u[i++] = M - (M - te) * t | 0, u[i++] = N - (N - ne) * t | 0, u[i++] = 255;
 	}
 }
 var Zc = class extends Jc {
@@ -11612,11 +11612,11 @@ var id = class {
 		}
 	}
 };
-re = Dd;
+ie = Dd;
 function Od(e) {
 	var t;
 	if (A(ld, this)) return;
-	(t = A(pd, this)).ctx != null || (t.ctx = jd.call(re, A(fd, this)));
+	(t = A(pd, this)).ctx != null || (t.ctx = jd.call(ie, A(fd, this)));
 	let n = A(Cd, this), r = A(xd, this);
 	for (let t of e) {
 		if (n.length > ad) {
@@ -11645,8 +11645,8 @@ function kd(e) {
 	let r = H.transform(A(Td, this), e.transform), i = Math.atan2(r[1], r[0]), a = A(bd, this)[e.fontName];
 	a.vertical && (i += Math.PI / 2);
 	let o = A(ud, this) && a.fontSubstitution || a.fontFamily;
-	o = re.fontFamilyMap.get(o) || o;
-	let s = Math.hypot(r[2], r[3]), c = s * Pd.call(re, o, a, A(fd, this)), l, u;
+	o = ie.fontFamilyMap.get(o) || o;
+	let s = Math.hypot(r[2], r[3]), c = s * Pd.call(ie, o, a, A(fd, this)), l, u;
 	i === 0 ? (l = r[4], u = r[5] - c) : (l = r[4] + c * Math.sin(i), u = r[5] - c * Math.cos(i));
 	let d = t.style;
 	d.left = `${(100 * l / A(hd, this)).toFixed(2)}%`, d.top = `${(100 * u / A(md, this)).toFixed(2)}%`, d.setProperty("--font-height", `${s.toFixed(2)}px`), d.fontFamily = o, n.fontSize = s, t.setAttribute("role", "presentation"), t.textContent = e.str, t.dir = e.dir, A(ud, this) && (t.dataset.fontName = a.fontSubstitutionLoadedName || e.fontName), i !== 0 && (n.angle = 180 / Math.PI * i);
@@ -11665,20 +11665,20 @@ function Ad(e) {
 	let { div: t, properties: n, ctx: r } = e, { style: i } = t;
 	if (n.canvasWidth !== 0 && n.hasText) {
 		let { fontFamily: e } = i, { canvasWidth: a, fontSize: o } = n;
-		Md.call(re, r, o * A(yd, this), e);
+		Md.call(ie, r, o * A(yd, this), e);
 		let { width: s } = r.measureText(t.textContent);
 		s > 0 && i.setProperty("--scale-x", a * A(yd, this) / s);
 	}
 	n.angle !== 0 && i.setProperty("--rotate", `${n.angle}deg`);
 }
 function jd(e = null) {
-	let t = D(re, this, Id)._.get(e || (e = ""));
+	let t = D(ie, this, Id)._.get(e || (e = ""));
 	if (!t) {
 		let n = document.createElement("canvas");
 		n.className = "hiddenCanvasElement", n.lang = e, document.body.append(n), t = n.getContext("2d", {
 			alpha: !1,
 			willReadFrequently: !0
-		}), D(re, this, Id)._.set(e, t), D(re, this, Ld)._.set(t, {
+		}), D(ie, this, Id)._.set(e, t), D(ie, this, Ld)._.set(t, {
 			size: 0,
 			family: ""
 		});
@@ -11686,31 +11686,31 @@ function jd(e = null) {
 	return t;
 }
 function Md(e, t, n) {
-	let r = D(re, this, Ld)._.get(e);
+	let r = D(ie, this, Ld)._.get(e);
 	t === r.size && n === r.family || (e.font = `${t}px ${n}`, r.size = t, r.family = n);
 }
 function Nd() {
-	if (D(re, this, Rd)._ !== null) return;
+	if (D(ie, this, Rd)._ !== null) return;
 	let e = document.createElement("div");
-	e.style.opacity = 0, e.style.lineHeight = 1, e.style.fontSize = "1px", e.style.position = "absolute", e.textContent = "X", document.body.append(e), Rd._ = D(re, this, e.getBoundingClientRect().height), e.remove();
+	e.style.opacity = 0, e.style.lineHeight = 1, e.style.fontSize = "1px", e.style.position = "absolute", e.textContent = "X", document.body.append(e), Rd._ = D(ie, this, e.getBoundingClientRect().height), e.remove();
 }
 function Pd(e, t, n) {
-	let r = D(re, this, Fd)._.get(e);
+	let r = D(ie, this, Fd)._.get(e);
 	if (r) return r;
-	let i = D(re, this, jd).call(this, n);
-	i.canvas.width = i.canvas.height = od, D(re, this, Md).call(this, i, od, e);
+	let i = D(ie, this, jd).call(this, n);
+	i.canvas.width = i.canvas.height = od, D(ie, this, Md).call(this, i, od, e);
 	let a = i.measureText(""), o = a.fontBoundingBoxAscent, s = Math.abs(a.fontBoundingBoxDescent);
 	i.canvas.width = i.canvas.height = 0;
 	let c = .8;
-	return o ? c = o / (o + s) : (et.platform.isFirefox && B("Enable the `dom.textMetrics.fontBoundingBox.enabled` preference in `about:config` to improve TextLayer rendering."), t.ascent ? c = t.ascent : t.descent && (c = 1 + t.descent)), D(re, this, Fd)._.set(e, c), c;
+	return o ? c = o / (o + s) : (et.platform.isFirefox && B("Enable the `dom.textMetrics.fontBoundingBox.enabled` preference in `about:config` to improve TextLayer rendering."), t.ascent ? c = t.ascent : t.descent && (c = 1 + t.descent)), D(ie, this, Fd)._.set(e, c), c;
 }
 var Fd = { _: /* @__PURE__ */ new Map() }, Id = { _: /* @__PURE__ */ new Map() }, Ld = { _: /* @__PURE__ */ new WeakMap() }, Rd = { _: null }, zd = { _: /* @__PURE__ */ new Set() }, Bd = 100;
 function Vd(e = {}) {
 	var t;
 	typeof e == "string" || e instanceof URL ? e = { url: e } : (e instanceof ArrayBuffer || ArrayBuffer.isView(e)) && (e = { data: e });
-	let n = new Hd(), { docId: r } = n, i = e.url ? Fs(e.url) : null, a = e.data ? Is(e.data) : null, o = e.httpHeaders || null, s = e.withCredentials === !0, c = (t = e.password) == null ? null : t, l = e.range instanceof Kd ? e.range : null, u = Number.isInteger(e.rangeChunkSize) && e.rangeChunkSize > 0 ? e.rangeChunkSize : Math.pow(2, 16), d = e.worker instanceof af ? e.worker : null, f = e.verbosity, p = typeof e.docBaseUrl == "string" && !St(e.docBaseUrl) ? e.docBaseUrl : null, m = Ls(e.cMapUrl), h = e.cMapPacked !== !1, g = Ls(e.iccUrl), _ = Ls(e.standardFontDataUrl), v = Ls(e.wasmUrl), y = e.stopAtErrors !== !0, b = Number.isInteger(e.maxImageSize) && e.maxImageSize > -1 ? e.maxImageSize : -1, x = typeof e.isOffscreenCanvasSupported == "boolean" ? e.isOffscreenCanvasSupported : !_e, S = typeof e.isImageDecoderSupported == "boolean" ? e.isImageDecoderSupported : !_e && (et.platform.isFirefox || !globalThis.chrome), C = Number.isInteger(e.canvasMaxAreaInBytes) ? e.canvasMaxAreaInBytes : -1, w = typeof e.disableFontFace == "boolean" ? e.disableFontFace : _e, T = e.fontExtraProperties === !0, E = e.enableXfa === !0, D = e.ownerDocument || globalThis.document, O = e.disableRange === !0, k = e.disableStream === !0, A = e.disableAutoFetch === !0, j = e.pdfBug === !0, M = e.CanvasFactory || (_e ? jc : ac), N = e.FilterFactory || (_e ? Ac : mc), ee = e.BinaryDataFactory || (_e ? Mc : nc), P = e.enableHWA === !0, F = e.enableWebGPU === !0 ? Hc() : Promise.resolve(!1), te = e.useWasm !== !1, I = e.pagesMapper || new Zu(), ne = typeof e.useSystemFonts == "boolean" ? e.useSystemFonts : !_e && !w, re = typeof e.useWorkerFetch == "boolean" ? e.useWorkerFetch : !!(ee === nc && m && h && _ && v && Ot(m, document.baseURI) && Ot(_, document.baseURI) && Ot(v, document.baseURI));
+	let n = new Hd(), { docId: r } = n, i = e.url ? Fs(e.url) : null, a = e.data ? Is(e.data) : null, o = e.httpHeaders || null, s = e.withCredentials === !0, c = (t = e.password) == null ? null : t, l = e.range instanceof Kd ? e.range : null, u = Number.isInteger(e.rangeChunkSize) && e.rangeChunkSize > 0 ? e.rangeChunkSize : Math.pow(2, 16), d = e.worker instanceof af ? e.worker : null, f = e.verbosity, p = typeof e.docBaseUrl == "string" && !St(e.docBaseUrl) ? e.docBaseUrl : null, m = Ls(e.cMapUrl), h = e.cMapPacked !== !1, g = Ls(e.iccUrl), _ = Ls(e.standardFontDataUrl), v = Ls(e.wasmUrl), y = e.stopAtErrors !== !0, b = Number.isInteger(e.maxImageSize) && e.maxImageSize > -1 ? e.maxImageSize : -1, x = typeof e.isOffscreenCanvasSupported == "boolean" ? e.isOffscreenCanvasSupported : !_e, S = typeof e.isImageDecoderSupported == "boolean" ? e.isImageDecoderSupported : !_e && (et.platform.isFirefox || !globalThis.chrome), C = Number.isInteger(e.canvasMaxAreaInBytes) ? e.canvasMaxAreaInBytes : -1, w = typeof e.disableFontFace == "boolean" ? e.disableFontFace : _e, T = e.fontExtraProperties === !0, E = e.enableXfa === !0, D = e.ownerDocument || globalThis.document, O = e.disableRange === !0, k = e.disableStream === !0, A = e.disableAutoFetch === !0, j = e.pdfBug === !0, M = e.CanvasFactory || (_e ? jc : ac), N = e.FilterFactory || (_e ? Ac : mc), ee = e.BinaryDataFactory || (_e ? Mc : nc), P = e.enableHWA === !0, te = e.enableWebGPU === !0 ? Hc() : Promise.resolve(!1), ne = e.useWasm !== !1, F = e.pagesMapper || new Zu(), re = typeof e.useSystemFonts == "boolean" ? e.useSystemFonts : !_e && !w, ie = typeof e.useWorkerFetch == "boolean" ? e.useWorkerFetch : !!(ee === nc && m && h && _ && v && Ot(m, document.baseURI) && Ot(_, document.baseURI) && Ot(v, document.baseURI));
 	Fe(f);
-	let ie = {
+	let ae = {
 		canvasFactory: new M({
 			ownerDocument: D,
 			enableHWA: P
@@ -11719,7 +11719,7 @@ function Vd(e = {}) {
 			docId: r,
 			ownerDocument: D
 		}),
-		binaryDataFactory: re ? null : new ee({
+		binaryDataFactory: ie ? null : new ee({
 			cMapUrl: m,
 			standardFontDataUrl: _,
 			wasmUrl: v
@@ -11729,7 +11729,7 @@ function Vd(e = {}) {
 		verbosity: f,
 		port: Eu.workerPort
 	}), n._worker = d);
-	let ae = {
+	let oe = {
 		docId: r,
 		apiVersion: "5.7.284",
 		data: a,
@@ -11746,9 +11746,9 @@ function Vd(e = {}) {
 			isImageDecoderSupported: S,
 			canvasMaxAreaInBytes: C,
 			fontExtraProperties: T,
-			useSystemFonts: ne,
-			useWasm: te,
-			useWorkerFetch: re,
+			useSystemFonts: re,
+			useWasm: ne,
+			useWorkerFetch: ie,
 			cMapUrl: m,
 			cMapPacked: h,
 			iccUrl: g,
@@ -11756,7 +11756,7 @@ function Vd(e = {}) {
 			wasmUrl: v,
 			hasGPU: !1
 		}
-	}, oe = {
+	}, I = {
 		ownerDocument: D,
 		pdfBug: j,
 		styleElement: null,
@@ -11766,11 +11766,11 @@ function Vd(e = {}) {
 			enableXfa: E
 		}
 	};
-	return Promise.all([d.promise, F]).then(function([, e]) {
+	return Promise.all([d.promise, te]).then(function([, e]) {
 		if (n.destroyed) throw Error("Loading aborted");
 		if (d.destroyed) throw Error("Worker was destroyed");
-		ae.evaluatorOptions.hasGPU = e;
-		let t = d.messageHandler.sendWithPromise("GetDocRequest", ae, a ? [a.buffer] : null), c;
+		oe.evaluatorOptions.hasGPU = e;
+		let t = d.messageHandler.sendWithPromise("GetDocRequest", oe, a ? [a.buffer] : null), c;
 		if (!a) if (l) c = new Jl({
 			pdfDataRangeTransport: l,
 			disableRange: O,
@@ -11789,7 +11789,7 @@ function Vd(e = {}) {
 			if (n.destroyed) throw Error("Loading aborted");
 			if (d.destroyed) throw Error("Worker was destroyed");
 			let t = new Ys(r, e, d.port);
-			n._transport = new Sf(t, n, c, oe, ie, I), t.send("Ready", null);
+			n._transport = new Sf(t, n, c, I, ae, F), t.send("Ready", null);
 		});
 	}).catch(n._capability.reject), n;
 }
@@ -12310,7 +12310,7 @@ var $d = /* @__PURE__ */ new WeakMap(), ef = /* @__PURE__ */ new WeakMap(), tf =
 		return V(this, "_setupFakeWorkerGlobal", n());
 	}
 };
-ie = af;
+ae = af;
 function of() {
 	A($d, this).resolve(), A(ef, this).send("configure", { verbosity: this.verbosity });
 }
@@ -12318,13 +12318,13 @@ function sf(e) {
 	M(tf, this, e), M(ef, this, new Ys("main", "worker", e)), A(ef, this).on("ready", () => {}), D(rf, this, of).call(this);
 }
 function cf() {
-	if (ff._ || uf.call(ie)) {
+	if (ff._ || uf.call(ae)) {
 		D(rf, this, lf).call(this);
 		return;
 	}
-	let { workerSrc: e } = ie;
+	let { workerSrc: e } = ae;
 	try {
-		ie._isSameOrigin(window.location, e) || (e = ie._createCDNWrapper(new URL(e, window.location).href));
+		ae._isSameOrigin(window.location, e) || (e = ae._createCDNWrapper(new URL(e, window.location).href));
 		let t = new Worker(e, { type: "module" }), n = new Ys("main", "worker", t), r = () => {
 			i.abort(), n.destroy(), t.terminate(), this.destroyed ? A($d, this).reject(/* @__PURE__ */ Error("Worker was destroyed")) : D(rf, this, lf).call(this);
 		}, i = new AbortController();
@@ -12359,7 +12359,7 @@ function cf() {
 	D(rf, this, lf).call(this);
 }
 function lf() {
-	ff._ || (B("Setting up fake worker."), ff._ = !0), ie._setupFakeWorkerGlobal.then((e) => {
+	ff._ || (B("Setting up fake worker."), ff._ = !0), ae._setupFakeWorkerGlobal.then((e) => {
 		var t, n;
 		if (this.destroyed) {
 			A($d, this).reject(/* @__PURE__ */ Error("Worker was destroyed"));
@@ -12382,12 +12382,12 @@ function uf() {
 	}
 }
 var df = { _: 0 }, ff = { _: !1 }, pf = { _: /* @__PURE__ */ new WeakMap() };
-_e && (ff._ = D(ie, ie, !0), Eu.workerSrc || (Eu.workerSrc = "./pdf.worker.mjs")), ie._isSameOrigin = (e, t) => {
+_e && (ff._ = D(ae, ae, !0), Eu.workerSrc || (Eu.workerSrc = "./pdf.worker.mjs")), ae._isSameOrigin = (e, t) => {
 	let n = URL.parse(e);
 	if (!(n != null && n.origin) || n.origin === "null") return !1;
 	let r = new URL(t, n);
 	return n.origin === r.origin;
-}, ie._createCDNWrapper = (e) => {
+}, ae._createCDNWrapper = (e) => {
 	let t = `await import("${e}");`;
 	return URL.createObjectURL(new Blob([t], { type: "text/javascript" }));
 };
@@ -12952,7 +12952,7 @@ var jf = /* @__PURE__ */ new WeakMap(), Mf = /* @__PURE__ */ new WeakMap(), Nf =
 		(e = A(jf, this)) == null || e.remove(), M(jf, this, null), M(Mf, this, null), (t = A(Pf, this)) == null || t.remove(), M(Pf, this, null);
 	}
 };
-ae = Hf;
+oe = Hf;
 function Uf() {
 	let e = document.createElement("div"), t = A(Bf, this)._signal;
 	e.addEventListener("contextmenu", kt, { signal: t }), e.className = "dropdown", e.role = "listbox", e.ariaMultiSelectable = "false", e.ariaOrientation = "vertical", e.setAttribute("data-l10n-id", "pdfjs-editor-colorpicker-dropdown"), A(Lf, this) && (e.id = `${A(Lf, this).id}_colorpicker_dropdown`);
@@ -12972,7 +12972,7 @@ function Wf(e, t) {
 	}), this.updateColor(e);
 }
 function Gf(e) {
-	ae._keyboardManager.exec(this, e);
+	oe._keyboardManager.exec(this, e);
 }
 function Kf(e) {
 	if (Jf.call(D(Vf, this))) {
@@ -15219,7 +15219,7 @@ var ih = /\r\n?|\n/g, ah = /* @__PURE__ */ new WeakMap(), oh = /* @__PURE__ */ n
 		super.resetAnnotationElement(e), e.resetEdited();
 	}
 };
-oe = uh;
+I = uh;
 function dh(e) {
 	let t = (e) => {
 		this.editorDiv.style.fontSize = `calc(${e}px * var(--total-scale-factor))`, this.translate(0, -(e - A(ch, this)) * this.parentScale), M(ch, this, e), D(lh, this, mh).call(this);
@@ -15252,7 +15252,7 @@ function ph() {
 	let e = [];
 	this.editorDiv.normalize();
 	let t = null;
-	for (let n of this.editorDiv.childNodes) (t == null ? void 0 : t.nodeType) === Node.TEXT_NODE && n.nodeName === "BR" || (e.push(hh.call(oe, n)), t = n);
+	for (let n of this.editorDiv.childNodes) (t == null ? void 0 : t.nodeType) === Node.TEXT_NODE && n.nodeName === "BR" || (e.push(hh.call(I, n)), t = n);
 	return e.join("\n");
 }
 function mh() {
@@ -18980,7 +18980,7 @@ var Ay, jy, My, Ny, Py = {
 		};
 	},
 	4644(e, t, n) {
-		var r = n(7811), i = n(3724), a = n(4576), o = n(4901), s = n(34), c = n(9297), l = n(6955), u = n(6823), d = n(6699), f = n(6840), p = n(2106), m = n(1625), h = n(2787), g = n(2967), _ = n(8227), v = n(3392), y = n(1181), b = y.enforce, x = y.get, S = a.Int8Array, C = S && S.prototype, w = a.Uint8ClampedArray, T = w && w.prototype, E = S && h(S), D = C && h(C), O = Object.prototype, k = a.TypeError, A = _("toStringTag"), j = v("TYPED_ARRAY_TAG"), M = "TypedArrayConstructor", N = r && !!g && l(a.opera) !== "Opera", ee = !1, P, F, te, I = {
+		var r = n(7811), i = n(3724), a = n(4576), o = n(4901), s = n(34), c = n(9297), l = n(6955), u = n(6823), d = n(6699), f = n(6840), p = n(2106), m = n(1625), h = n(2787), g = n(2967), _ = n(8227), v = n(3392), y = n(1181), b = y.enforce, x = y.get, S = a.Int8Array, C = S && S.prototype, w = a.Uint8ClampedArray, T = w && w.prototype, E = S && h(S), D = C && h(C), O = Object.prototype, k = a.TypeError, A = _("toStringTag"), j = v("TYPED_ARRAY_TAG"), M = "TypedArrayConstructor", N = r && !!g && l(a.opera) !== "Opera", ee = !1, P, te, ne, F = {
 			Int8Array: 1,
 			Uint8Array: 1,
 			Uint8ClampedArray: 1,
@@ -18990,32 +18990,32 @@ var Ay, jy, My, Ny, Py = {
 			Uint32Array: 4,
 			Float32Array: 4,
 			Float64Array: 8
-		}, ne = {
+		}, re = {
 			BigInt64Array: 8,
 			BigUint64Array: 8
-		}, re = function(e) {
+		}, ie = function(e) {
 			if (!s(e)) return !1;
 			var t = l(e);
-			return t === "DataView" || c(I, t) || c(ne, t);
-		}, ie = function(e) {
+			return t === "DataView" || c(F, t) || c(re, t);
+		}, ae = function(e) {
 			var t = h(e);
 			if (s(t)) {
 				var n = x(t);
-				return n && c(n, M) ? n[M] : ie(t);
+				return n && c(n, M) ? n[M] : ae(t);
 			}
-		}, ae = function(e) {
+		}, oe = function(e) {
 			if (!s(e)) return !1;
 			var t = l(e);
-			return c(I, t) || c(ne, t);
-		}, oe = function(e) {
-			if (ae(e)) return e;
+			return c(F, t) || c(re, t);
+		}, I = function(e) {
+			if (oe(e)) return e;
 			throw new k("Target is not a typed array");
 		}, se = function(e) {
 			if (o(e) && (!g || m(E, e))) return e;
 			throw new k(u(e) + " is not a typed array constructor");
 		}, ce = function(e, t, n, r) {
 			if (i) {
-				if (n) for (var o in I) {
+				if (n) for (var o in F) {
 					var s = a[o];
 					if (s && c(s.prototype, e)) try {
 						delete s.prototype[e];
@@ -19032,7 +19032,7 @@ var Ay, jy, My, Ny, Py = {
 			if (i) {
 				if (g) {
 					if (n) {
-						for (r in I) if (o = a[r], o && c(o, e)) try {
+						for (r in F) if (o = a[r], o && c(o, e)) try {
 							delete o[e];
 						} catch (e) {}
 					}
@@ -19041,31 +19041,31 @@ var Ay, jy, My, Ny, Py = {
 					} catch (e) {}
 					else return;
 				}
-				for (r in I) o = a[r], o && (!o[e] || n) && f(o, e, t);
+				for (r in F) o = a[r], o && (!o[e] || n) && f(o, e, t);
 			}
 		};
-		for (P in I) F = a[P], te = F && F.prototype, te ? b(te)[M] = F : N = !1;
-		for (P in ne) F = a[P], te = F && F.prototype, te && (b(te)[M] = F);
+		for (P in F) te = a[P], ne = te && te.prototype, ne ? b(ne)[M] = te : N = !1;
+		for (P in re) te = a[P], ne = te && te.prototype, ne && (b(ne)[M] = te);
 		if ((!N || !o(E) || E === Function.prototype) && (E = function() {
 			throw new k("Incorrect invocation");
-		}, N)) for (P in I) a[P] && g(a[P], E);
-		if ((!N || !D || D === O) && (D = E.prototype, N)) for (P in I) a[P] && g(a[P].prototype, D);
+		}, N)) for (P in F) a[P] && g(a[P], E);
+		if ((!N || !D || D === O) && (D = E.prototype, N)) for (P in F) a[P] && g(a[P].prototype, D);
 		if (N && h(T) !== D && g(T, D), i && !c(D, A)) for (P in ee = !0, p(D, A, {
 			configurable: !0,
 			get: function() {
 				return s(this) ? this[j] : void 0;
 			}
-		}), I) a[P] && d(a[P].prototype, j, P);
+		}), F) a[P] && d(a[P].prototype, j, P);
 		e.exports = {
 			NATIVE_ARRAY_BUFFER_VIEWS: N,
 			TYPED_ARRAY_TAG: ee && j,
-			aTypedArray: oe,
+			aTypedArray: I,
 			aTypedArrayConstructor: se,
 			exportTypedArrayMethod: ce,
 			exportTypedArrayStaticMethod: le,
-			getTypedArrayConstructor: ie,
-			isView: re,
-			isTypedArray: ae,
+			getTypedArrayConstructor: ae,
+			isView: ie,
+			isTypedArray: oe,
 			TypedArray: E,
 			TypedArrayPrototype: D
 		};
@@ -20567,31 +20567,31 @@ var Ay, jy, My, Ny, Py = {
 	9112(e, t, n) {
 		var r = n(6518), i = n(3724), a = n(4576), o = n(7751), s = n(9504), c = n(9565), l = n(4901), u = n(34), d = n(4376), f = n(9297), p = n(655), m = n(6198), h = n(4659), g = n(9039), _ = n(8235), v = n(4495), y = a.JSON, b = a.Number, x = a.SyntaxError, S = y && y.parse, C = o("Object", "keys"), w = Object.getOwnPropertyDescriptor, T = s("".charAt), E = s("".slice), D = s(/./.exec), O = s([].push), k = /^\d$/, A = /^[1-9]$/, j = /^[\d-]$/, M = /^[\t\n\r ]$/, N = 0, ee = 1, P = function(e, t) {
 			e = p(e);
-			var n = new ne(e, 0, ""), r = n.parse(), i = r.value, a = n.skip(M, r.end);
+			var n = new re(e, 0, ""), r = n.parse(), i = r.value, a = n.skip(M, r.end);
 			if (a < e.length) throw new x("Unexpected extra character: \"" + T(e, a) + "\" after the parsed data at: " + a);
-			return l(t) ? F({ "": i }, "", t, r) : i;
-		}, F = function(e, t, n, r) {
+			return l(t) ? te({ "": i }, "", t, r) : i;
+		}, te = function(e, t, n, r) {
 			var i = e[t], a = r && i === r.value, o = a && typeof r.source == "string" ? { source: r.source } : {}, s, l, p, h, g;
 			if (u(i)) {
 				var _ = d(i), v = a ? r.nodes : _ ? [] : {};
-				if (_) for (s = v.length, p = m(i), h = 0; h < p; h++) te(i, h, F(i, "" + h, n, h < s ? v[h] : void 0));
-				else for (l = C(i), p = m(l), h = 0; h < p; h++) g = l[h], te(i, g, F(i, g, n, f(v, g) ? v[g] : void 0));
+				if (_) for (s = v.length, p = m(i), h = 0; h < p; h++) ne(i, h, te(i, "" + h, n, h < s ? v[h] : void 0));
+				else for (l = C(i), p = m(l), h = 0; h < p; h++) g = l[h], ne(i, g, te(i, g, n, f(v, g) ? v[g] : void 0));
 			}
 			return c(n, e, t, i, o);
-		}, te = function(e, t, n) {
+		}, ne = function(e, t, n) {
 			if (i) {
 				var r = w(e, t);
 				if (r && !r.configurable) return;
 			}
 			n === void 0 ? delete e[t] : h(e, t, n);
-		}, I = function(e, t, n, r) {
+		}, F = function(e, t, n, r) {
 			this.value = e, this.end = t, this.source = n, this.nodes = r;
-		}, ne = function(e, t) {
+		}, re = function(e, t) {
 			this.source = e, this.index = t;
 		};
-		ne.prototype = {
+		re.prototype = {
 			fork: function(e) {
-				return new ne(this.source, e);
+				return new re(this.source, e);
 			},
 			parse: function() {
 				var e = this.source, t = this.skip(M, this.index), n = this.fork(t), r = T(e, t);
@@ -20607,7 +20607,7 @@ var Ay, jy, My, Ny, Py = {
 				throw new x("Unexpected character: \"" + r + "\" at: " + t);
 			},
 			node: function(e, t, n, r, i) {
-				return new I(t, r, e ? null : E(this.source, n, r), i);
+				return new F(t, r, e ? null : E(this.source, n, r), i);
 			},
 			object: function() {
 				for (var e = this.source, t = this.index + 1, n = !1, r = {}, i = {}, a = !1; t < e.length;) {
@@ -20678,20 +20678,20 @@ var Ay, jy, My, Ny, Py = {
 				throw new x("Unexpected character: \"" + n + "\" at: " + t);
 			}
 		};
-		var re = g(function() {
+		var ie = g(function() {
 			var e = "9007199254740993", t;
 			return S(e, function(e, n, r) {
 				t = r.source;
 			}), t !== e;
-		}), ie = v && !g(function() {
+		}), ae = v && !g(function() {
 			return 1 / S("-0 	") != -Infinity;
 		});
 		r({
 			target: "JSON",
 			stat: !0,
-			forced: re
+			forced: ie
 		}, { parse: function(e, t) {
-			return ie && !l(t) ? S(e) : P(e, t);
+			return ae && !l(t) ? S(e) : P(e, t);
 		} });
 	},
 	3110(e, t, n) {
@@ -20700,15 +20700,15 @@ var Ay, jy, My, Ny, Py = {
 			return x([e]) !== "[null]" || x({ a: e }) !== "{}" || x(Object(e)) !== "{}";
 		}), P = c(function() {
 			return x("\udf06\ud834") !== "\"\\udf06\\ud834\"" || x("\udead") !== "\"\\udead\"";
-		}), F = ee ? function(e, t) {
-			var n = h(arguments), r = I(t);
+		}), te = ee ? function(e, t) {
+			var n = h(arguments), r = F(t);
 			if (!(!u(r) && (e === void 0 || f(e)))) return n[1] = function(e, t) {
 				if (u(r) && (t = o(r, this, b(e), t)), !f(t)) return t;
 			}, a(x, null, n);
-		} : x, te = function(e, t, n) {
+		} : x, ne = function(e, t, n) {
 			var r = C(n, t - 1), i = C(n, t + 1);
 			return S(A, e) && !S(j, i) || S(j, e) && !S(A, r) ? "\\u" + O(w(e, 0), 16) : e;
-		}, I = function(e) {
+		}, F = function(e) {
 			if (u(e)) return e;
 			if (l(e)) {
 				for (var t = e.length, n = [], r = 0; r < t; r++) {
@@ -20729,11 +20729,11 @@ var Ay, jy, My, Ny, Py = {
 			arity: 3,
 			forced: ee || P || !y
 		}, { stringify: function(e, t, n) {
-			var r = I(t), i = [], a = F(e, function(e, t) {
+			var r = F(t), i = [], a = te(e, function(e, t) {
 				var n = u(r) ? o(r, this, b(e), t) : t;
 				return !y && d(n) ? M + (D(i, n.rawJSON) - 1) : n;
 			}, n);
-			if (typeof a != "string" || (P && (a = T(a, k, te)), y)) return a;
+			if (typeof a != "string" || (P && (a = T(a, k, ne)), y)) return a;
 			for (var s = "", c = a.length, l = 0; l < c; l++) {
 				var f = C(a, l);
 				if (f === "\"") {
@@ -26630,39 +26630,44 @@ var WO = { create() {
 //#endregion
 //#region src/package/vendors/pdf/PdfView.vue?vue&type=script&setup=true&lang.ts
 i();
-var GO = { class: "pdf-toolbar" }, KO = ["aria-pressed"], qO = { class: "pdf-toolbar-group" }, JO = ["disabled"], YO = { class: "pdf-page-meter" }, XO = ["disabled"], ZO = { class: "pdf-toolbar-group pdf-toolbar-group--zoom" }, QO = ["disabled"], $O = ["disabled"], ek = { class: "pdf-content" }, tk = {
+var GO = { class: "pdf-toolbar" }, KO = ["aria-pressed"], qO = { class: "pdf-toolbar-group" }, JO = ["disabled"], YO = { class: "pdf-page-meter" }, XO = ["disabled"], ZO = { class: "pdf-toolbar-group pdf-toolbar-group--zoom" }, QO = ["disabled"], $O = ["disabled"], ek = { class: "pdf-toolbar-group pdf-toolbar-group--rotate" }, tk = { class: "pdf-rotation-meter" }, nk = { class: "pdf-content" }, rk = {
 	key: 0,
 	class: "pdf-nav-pane"
-}, nk = { class: "pdf-nav-head" }, rk = {
+}, ik = { class: "pdf-nav-head" }, ak = {
 	class: "pdf-nav-tabs",
 	role: "tablist",
 	"aria-label": "PDF 导航类型"
-}, ik = ["aria-selected"], ak = ["aria-selected"], ok = {
+}, ok = ["aria-selected"], sk = ["aria-selected"], ck = {
 	key: 0,
 	class: "pdf-page-list"
-}, sk = ["onClick"], ck = { class: "pdf-page-thumb" }, lk = { class: "pdf-page-label" }, uk = {
+}, lk = ["onClick"], uk = { class: "pdf-page-thumb" }, dk = { class: "pdf-page-label" }, fk = {
 	key: 1,
 	class: "pdf-outline-list"
-}, dk = ["onClick"], fk = ["onClick"], pk = { class: "pdf-outline-title" }, mk = {
+}, pk = ["onClick"], mk = ["onClick"], hk = { class: "pdf-outline-title" }, gk = {
 	key: 0,
 	class: "pdf-outline-empty"
-}, hk = { class: "pdf-viewport" }, gk = {
+}, _k = { class: "pdf-viewport" }, vk = {
 	key: 0,
 	class: "pdf-state"
-}, _k = {
+}, yk = {
 	key: 1,
 	class: "pdf-state pdf-state--error"
-}, vk = .2, yk = 3, bk = .1, xk = 28, Sk = 18, Ck = 8e6, wk = /* @__PURE__ */ l(/* @__PURE__ */ g({
+}, bk = .2, xk = 3, Sk = .1, Ck = 28, wk = 18, Tk = 8e6, Ek = /* @__PURE__ */ l(/* @__PURE__ */ g({
 	__name: "PdfView",
 	props: {
 		data: {},
-		exportAdapter: { type: Function }
+		exportAdapter: { type: Function },
+		options: {}
 	},
 	setup(e) {
-		let t = e, n = C(null), r = C(!0), i = C("pages"), o = C("loading"), s = C(""), c = C(1), l = C(0), u = C(1), g = C(!0), D = C([]), O = f(() => Array.from({ length: l.value }, (e, t) => t + 1)), k = f(() => {
+		var t, n, r, i;
+		let o = e, s = C(null), c = C(((t = o.options) == null ? void 0 : t.navigation) === !1 ? !1 : ((n = o.options) == null ? void 0 : n.defaultNavigationVisible) !== !1), l = C("pages"), u = C("loading"), g = C(""), D = C(1), O = C(0), k = C(1), A = C(!0), j = C(fe((r = (i = o.options) == null ? void 0 : i.rotation) == null ? 0 : r)), M = C([]), N = f(() => {
+			var e;
+			return ((e = o.options) == null ? void 0 : e.navigation) !== !1;
+		}), ee = f(() => Array.from({ length: O.value }, (e, t) => t + 1)), P = f(() => {
 			let e = (t) => t.reduce((t, n) => t + 1 + e(n.items), 0);
-			return e(D.value);
-		}), A = f(() => {
+			return e(M.value);
+		}), te = f(() => {
 			let e = [], t = (n, r) => {
 				n.forEach((n) => {
 					e.push({
@@ -26671,22 +26676,26 @@ var GO = { class: "pdf-toolbar" }, KO = ["aria-pressed"], qO = { class: "pdf-too
 					}), n.expanded && n.items.length && t(n.items, r + 1);
 				});
 			};
-			return t(D.value, 0), e;
-		}), j = f(() => `${Math.round(u.value * 100)}%`), M = f(() => c.value > 1), N = f(() => c.value < l.value), ee = f(() => u.value > vk), P = f(() => u.value < yk), F = {
+			return t(M.value, 0), e;
+		}), ne = f(() => `${Math.round(k.value * 100)}%`), F = f(() => `${j.value}°`), re = f(() => D.value > 1), ie = f(() => D.value < O.value), ae = f(() => k.value > bk), oe = f(() => k.value < xk), I = {
 			viewer: null,
 			linkService: null,
 			resource: null,
 			document: null,
 			search: ""
-		}, te = null, I = 0, ne = !1, re = 0;
-		function ie() {
+		}, se = null, ce = 0, le = !1, ue = 0;
+		function de() {
 			return typeof window > "u" || !("Worker" in window) ? null : af.create({ port: WO.create() });
 		}
-		function ae(e) {
-			return oe.apply(this, arguments);
+		function fe(e) {
+			let t = (Math.round(e / 90) * 90 % 360 + 360) % 360;
+			return t === 90 || t === 180 || t === 270 ? t : 0;
 		}
-		function oe() {
-			return oe = a(function* (e) {
+		function pe(e) {
+			return me.apply(this, arguments);
+		}
+		function me() {
+			return me = a(function* (e) {
 				if (e) try {
 					yield e.loadingTask.destroy();
 				} catch (e) {
@@ -26695,14 +26704,14 @@ var GO = { class: "pdf-toolbar" }, KO = ["aria-pressed"], qO = { class: "pdf-too
 					var t;
 					(t = e.worker) == null || t.destroy();
 				}
-			}), oe.apply(this, arguments);
+			}), me.apply(this, arguments);
 		}
-		function se(e) {
+		function he(e) {
 			return e.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 		}
-		function ce(e, t = "outline") {
+		function ge(e, t = "outline") {
 			return e.map((e, n) => {
-				let r = `${t}-${n}`, i = Array.isArray(e.items) ? ce(e.items, r) : [];
+				let r = `${t}-${n}`, i = Array.isArray(e.items) ? ge(e.items, r) : [];
 				return {
 					id: r,
 					title: e.title || `目录 ${n + 1}`,
@@ -26712,36 +26721,42 @@ var GO = { class: "pdf-toolbar" }, KO = ["aria-pressed"], qO = { class: "pdf-too
 				};
 			});
 		}
-		function le(e) {
-			return ue.apply(this, arguments);
+		function L(e) {
+			return _e.apply(this, arguments);
 		}
-		function ue() {
-			return ue = a(function* (e) {
+		function _e() {
+			return _e = a(function* (e) {
 				try {
 					let t = yield e.getOutline();
-					if (ne || F.document !== e) return;
-					D.value = Array.isArray(t) ? ce(t) : [];
+					if (le || I.document !== e) return;
+					M.value = Array.isArray(t) ? ge(t) : [];
 				} catch (e) {
-					console.warn("PDF 大纲读取失败", e), D.value = [];
+					console.warn("PDF 大纲读取失败", e), M.value = [];
 				}
-			}), ue.apply(this, arguments);
+			}), _e.apply(this, arguments);
 		}
-		function de(e, t, n) {
-			let r = n === "print" ? 1.75 : 1.5, i = Math.sqrt(Ck / Math.max(e * t, 1));
+		function ve(e, t, n) {
+			let r = n === "print" ? 1.75 : 1.5, i = Math.sqrt(Tk / Math.max(e * t, 1));
 			return Math.max(.75, Math.min(r, i));
 		}
-		function fe(e) {
-			return pe.apply(this, arguments);
+		function ye(e) {
+			return be.apply(this, arguments);
 		}
-		function pe() {
-			return pe = a(function* (e) {
-				let t = F.document;
+		function be() {
+			return be = a(function* (e) {
+				let t = I.document;
 				if (!t) throw Error("PDF 尚未加载完成，请稍后再试");
 				let n = [];
 				for (let i = 1; i <= t.numPages; i += 1) {
 					var r;
-					if (ne) throw Error("PDF 已卸载，无法继续打印");
-					let a = yield t.getPage(i), o = a.getViewport({ scale: _t.PDF_TO_CSS_UNITS }), s = de(o.width, o.height, e.mode), c = a.getViewport({ scale: _t.PDF_TO_CSS_UNITS * s }), l = document.createElement("canvas"), u = l.getContext("2d");
+					if (le) throw Error("PDF 已卸载，无法继续打印");
+					let a = yield t.getPage(i), o = a.getViewport({
+						scale: _t.PDF_TO_CSS_UNITS,
+						rotation: j.value
+					}), s = ve(o.width, o.height, e.mode), c = a.getViewport({
+						scale: _t.PDF_TO_CSS_UNITS * s,
+						rotation: j.value
+					}), l = document.createElement("canvas"), u = l.getContext("2d");
 					if (!u) throw Error("当前浏览器无法创建 PDF 打印画布");
 					l.width = Math.ceil(c.width), l.height = Math.ceil(c.height), yield a.render({
 						canvas: l,
@@ -26749,172 +26764,193 @@ var GO = { class: "pdf-toolbar" }, KO = ["aria-pressed"], qO = { class: "pdf-too
 						viewport: c
 					}).promise;
 					let d = `${e.title} - 第 ${i} 页`;
-					n.push(`<section class="pdf-export-page" style="width:${Math.ceil(o.width)}px" aria-label="${se(d)}"><img src="${l.toDataURL("image/png")}" alt="${se(d)}" /></section>`), l.width = 0, l.height = 0, (r = a.cleanup) == null || r.call(a);
+					n.push(`<section class="pdf-export-page" style="width:${Math.ceil(o.width)}px" aria-label="${he(d)}"><img src="${l.toDataURL("image/png")}" alt="${he(d)}" /></section>`), l.width = 0, l.height = 0, (r = a.cleanup) == null || r.call(a);
 				}
 				return `<div class="pdf-export-document">${n.join("")}</div>`;
-			}), pe.apply(this, arguments);
+			}), be.apply(this, arguments);
 		}
-		function me() {
-			return he.apply(this, arguments);
+		function xe() {
+			return Se.apply(this, arguments);
 		}
-		function he() {
-			return he = a(function* () {
+		function Se() {
+			return Se = a(function* () {
 				var e;
-				if (!n.value) return;
-				let r = ++re;
-				o.value = "loading", s.value = "", F.document = null, D.value = [], (e = t.exportAdapter) == null || e.call(t, null);
-				let i = null;
+				if (!s.value) return;
+				let t = ++ue;
+				u.value = "loading", g.value = "", I.document = null, M.value = [], (e = o.exportAdapter) == null || e.call(o, null);
+				let n = null;
 				try {
-					var a;
-					if (ne || r !== re || !n.value) return;
-					let e = new YS(), s = new kS({ eventBus: e }), d = new oS({
+					var r;
+					if (le || t !== ue || !s.value) return;
+					let e = new YS(), i = new kS({ eventBus: e }), a = new oS({
 						eventBus: e,
-						linkService: s,
+						linkService: i,
 						updateMatchesCountOnProgress: !0
-					}), f = new xO({
-						container: n.value,
+					}), c = new xO({
+						container: s.value,
 						eventBus: e,
-						linkService: s,
-						findController: d,
+						linkService: i,
+						findController: a,
 						l10n: new Dw("zh-CN"),
 						enableAutoLinking: !1
 					});
-					F.viewer = f, F.linkService = s, s.setViewer(f), e.on("pagesinit", () => {
-						ye(), o.value = "ready", F.search && e.dispatch("find", {
+					I.viewer = c, I.linkService = i, i.setViewer(c), e.on("pagesinit", () => {
+						ke(j.value), Te(), u.value = "ready", I.search && e.dispatch("find", {
 							type: "",
-							query: F.search
+							query: I.search
 						});
 					}), e.on("pagechanging", ({ pageNumber: e }) => {
-						c.value = e;
+						D.value = e;
 					}), e.on("scalechanging", ({ scale: e }) => {
-						u.value = _e(e);
+						k.value = R(e);
 					});
-					let p = ie(), m = Vd({
-						data: t.data,
-						worker: p || void 0,
+					let l = de(), d = Vd({
+						data: o.data,
+						worker: l || void 0,
 						cMapUrl: `https://npm.onmicrosoft.cn/pdfjs-dist@${kf}/cmaps/`,
 						useWorkerFetch: !0,
 						cMapPacked: !0,
 						enableXfa: !0
 					});
-					i = {
-						loadingTask: m,
-						worker: p
-					}, F.resource = i;
-					let h = yield m.promise;
-					if (ne || r !== re || F.resource !== i) {
-						F.resource === i && (F.resource = null, yield ae(i));
+					n = {
+						loadingTask: d,
+						worker: l
+					}, I.resource = n;
+					let f = yield d.promise;
+					if (le || t !== ue || I.resource !== n) {
+						I.resource === n && (I.resource = null, yield pe(n));
 						return;
 					}
-					l.value = h.numPages, c.value = 1, F.document = h, (a = t.exportAdapter) == null || a.call(t, {
+					O.value = f.numPages, D.value = 1, I.document = f, (r = o.exportAdapter) == null || r.call(o, {
 						includeDocumentStyles: !1,
-						toHtml: fe
-					}), le(h), f.setDocument(h), s.setDocument(h, null);
+						toHtml: ye
+					}), L(f), c.setDocument(f), i.setDocument(f, null);
 				} catch (e) {
-					if (F.resource === i && (F.resource = null, ae(i)), ne || r !== re) return;
-					o.value = "error", s.value = e instanceof Error ? e.message : "PDF 加载失败";
+					if (I.resource === n && (I.resource = null, pe(n)), le || t !== ue) return;
+					u.value = "error", g.value = e instanceof Error ? e.message : "PDF 加载失败";
 				}
-			}), he.apply(this, arguments);
-		}
-		function ge(e) {
-			var t;
-			let n = e.getPageView(0), r = n == null ? void 0 : n.pdfPage;
-			if (r) return r.getViewport({ scale: _t.PDF_TO_CSS_UNITS }).width;
-			let i = n == null || (t = n.viewport) == null ? void 0 : t.width;
-			return i && u.value ? i / u.value : 0;
-		}
-		function L(e) {
-			var t;
-			let r = ge(e), i = ((t = n.value) == null ? void 0 : t.clientWidth) || window.innerWidth, a = Math.max(i - xk - Sk, 96);
-			return r ? _e(a / r) : 1;
-		}
-		function _e(e) {
-			return Number(Math.min(yk, Math.max(vk, e)).toFixed(2));
-		}
-		function ve(e) {
-			if (!F.viewer) return;
-			let t = _e(e);
-			F.viewer.currentScale = t, u.value = t;
-		}
-		function ye() {
-			F.viewer && (g.value = !0, ve(L(F.viewer)), _(() => {
-				var e;
-				(e = F.viewer) == null || e.update();
-			}));
-		}
-		function be() {
-			!g.value || !F.viewer || typeof window > "u" || (window.cancelAnimationFrame(I), I = window.requestAnimationFrame(() => {
-				ye();
-			}));
-		}
-		function xe() {
-			g.value = !1, ve(u.value + bk);
-		}
-		function Se() {
-			g.value = !1, ve(u.value - bk);
+			}), Se.apply(this, arguments);
 		}
 		function Ce(e) {
-			if (!F.viewer || !l.value) return;
-			let t = Math.min(l.value, Math.max(1, e));
-			F.viewer.currentPageNumber = t, c.value = t;
+			var t;
+			let n = e.getPageView(0), r = n == null ? void 0 : n.pdfPage;
+			if (r) return r.getViewport({
+				scale: _t.PDF_TO_CSS_UNITS,
+				rotation: j.value
+			}).width;
+			let i = n == null || (t = n.viewport) == null ? void 0 : t.width;
+			return i && k.value ? i / k.value : 0;
 		}
 		function we(e) {
-			i.value = e;
+			var t;
+			let n = Ce(e), r = ((t = s.value) == null ? void 0 : t.clientWidth) || window.innerWidth, i = Math.max(r - Ck - wk, 96);
+			return n ? R(i / n) : 1;
 		}
-		function R() {
-			r.value = !r.value, _(() => {
+		function R(e) {
+			return Number(Math.min(xk, Math.max(bk, e)).toFixed(2));
+		}
+		function z(e) {
+			if (!I.viewer) return;
+			let t = R(e);
+			I.viewer.currentScale = t, k.value = t;
+		}
+		function Te() {
+			I.viewer && (A.value = !0, z(we(I.viewer)), _(() => {
 				var e;
-				if (g.value) {
-					ye();
+				(e = I.viewer) == null || e.update();
+			}));
+		}
+		function Ee() {
+			!A.value || !I.viewer || typeof window > "u" || (window.cancelAnimationFrame(ce), ce = window.requestAnimationFrame(() => {
+				Te();
+			}));
+		}
+		function De() {
+			A.value = !1, z(k.value + Sk);
+		}
+		function Oe() {
+			A.value = !1, z(k.value - Sk);
+		}
+		function ke(e) {
+			let t = fe(e);
+			j.value = t, I.viewer && (I.viewer.pagesRotation = t, _(() => {
+				var e;
+				if (A.value) {
+					Te();
 					return;
 				}
-				(e = F.viewer) == null || e.update();
-			});
+				(e = I.viewer) == null || e.update();
+			}));
 		}
-		function z() {
-			ye();
+		function Ae() {
+			ke(j.value - 90);
 		}
-		function Te(e) {
+		function je() {
+			ke(j.value + 90);
+		}
+		function Me(e) {
+			if (!I.viewer || !O.value) return;
+			let t = Math.min(O.value, Math.max(1, e));
+			I.viewer.currentPageNumber = t, D.value = t;
+		}
+		function Ne(e) {
+			l.value = e;
+		}
+		function Pe() {
+			N.value && (c.value = !c.value, _(() => {
+				var e;
+				if (A.value) {
+					Te();
+					return;
+				}
+				(e = I.viewer) == null || e.update();
+			}));
+		}
+		function Fe() {
+			Te();
+		}
+		function Ie(e) {
 			e.items.length && (e.expanded = !e.expanded);
 		}
-		function Ee(e) {
-			!e.dest || !F.linkService || F.linkService.goToDestination(e.dest);
+		function Le(e) {
+			!e.dest || !I.linkService || I.linkService.goToDestination(e.dest);
 		}
 		return x(() => {
-			me(), n.value && (te = new ResizeObserver(() => {
-				be();
-			}), te.observe(n.value));
+			xe(), s.value && (se = new ResizeObserver(() => {
+				Ee();
+			}), se.observe(s.value));
 		}), b(() => {
 			var e;
-			ne = !0, re += 1, window.cancelAnimationFrame(I), te == null || te.disconnect(), te = null, F.viewer = null, F.linkService = null, F.document = null, D.value = [], (e = t.exportAdapter) == null || e.call(t, null);
-			let n = F.resource;
-			F.resource = null, ae(n);
-		}), (e, t) => (S(), m("div", { class: v(["pdf-shell", { "pdf-shell--nav-hidden": !r.value }]) }, [h("div", GO, [
-			h("button", {
-				class: v(["pdf-icon-button", { "pdf-icon-button--active": r.value }]),
+			le = !0, ue += 1, window.cancelAnimationFrame(ce), se == null || se.disconnect(), se = null, I.viewer = null, I.linkService = null, I.document = null, M.value = [], (e = o.exportAdapter) == null || e.call(o, null);
+			let t = I.resource;
+			I.resource = null, pe(t);
+		}), (e, t) => (S(), m("div", { class: v(["pdf-shell", { "pdf-shell--nav-hidden": !N.value || !c.value }]) }, [h("div", GO, [
+			N.value ? (S(), m("button", {
+				key: 0,
+				class: v(["pdf-icon-button", { "pdf-icon-button--active": c.value }]),
 				type: "button",
 				title: "切换导航窗格",
 				"aria-label": "切换导航窗格",
-				"aria-pressed": r.value,
-				onClick: R
-			}, [...t[4] || (t[4] = [h("span", { class: "pdf-panel-icon" }, null, -1)])], 10, KO),
+				"aria-pressed": c.value,
+				onClick: Pe
+			}, [...t[4] || (t[4] = [h("span", { class: "pdf-panel-icon" }, null, -1)])], 10, KO)) : p("", !0),
 			h("div", qO, [
 				h("button", {
 					class: "pdf-icon-button",
 					type: "button",
 					title: "上一页",
 					"aria-label": "上一页",
-					disabled: !M.value,
-					onClick: t[0] || (t[0] = (e) => Ce(c.value - 1))
+					disabled: !re.value,
+					onClick: t[0] || (t[0] = (e) => Me(D.value - 1))
 				}, [...t[5] || (t[5] = [h("span", { "aria-hidden": "true" }, "‹", -1)])], 8, JO),
-				h("span", YO, [h("strong", null, T(c.value), 1), h("span", null, "/ " + T(l.value || "-"), 1)]),
+				h("span", YO, [h("strong", null, T(D.value), 1), h("span", null, "/ " + T(O.value || "-"), 1)]),
 				h("button", {
 					class: "pdf-icon-button",
 					type: "button",
 					title: "下一页",
 					"aria-label": "下一页",
-					disabled: !N.value,
-					onClick: t[1] || (t[1] = (e) => Ce(c.value + 1))
+					disabled: !ie.value,
+					onClick: t[1] || (t[1] = (e) => Me(D.value + 1))
 				}, [...t[6] || (t[6] = [h("span", { "aria-hidden": "true" }, "›", -1)])], 8, XO)
 			]),
 			h("div", ZO, [
@@ -26923,64 +26959,81 @@ var GO = { class: "pdf-toolbar" }, KO = ["aria-pressed"], qO = { class: "pdf-too
 					type: "button",
 					title: "缩小",
 					"aria-label": "缩小",
-					disabled: !ee.value,
-					onClick: Se
+					disabled: !ae.value,
+					onClick: Oe
 				}, [...t[7] || (t[7] = [h("span", { "aria-hidden": "true" }, "−", -1)])], 8, QO),
 				h("button", {
 					class: "pdf-scale-button",
 					type: "button",
 					title: "适合宽度",
-					onClick: z
-				}, T(j.value), 1),
+					onClick: Fe
+				}, T(ne.value), 1),
 				h("button", {
 					class: "pdf-icon-button",
 					type: "button",
 					title: "放大",
 					"aria-label": "放大",
-					disabled: !P.value,
-					onClick: xe
+					disabled: !oe.value,
+					onClick: De
 				}, [...t[8] || (t[8] = [h("span", { "aria-hidden": "true" }, "+", -1)])], 8, $O)
+			]),
+			h("div", ek, [
+				h("button", {
+					class: "pdf-icon-button",
+					type: "button",
+					title: "向左旋转",
+					"aria-label": "向左旋转",
+					onClick: Ae
+				}, [...t[9] || (t[9] = [h("span", { "aria-hidden": "true" }, "↺", -1)])]),
+				h("span", tk, T(F.value), 1),
+				h("button", {
+					class: "pdf-icon-button",
+					type: "button",
+					title: "向右旋转",
+					"aria-label": "向右旋转",
+					onClick: je
+				}, [...t[10] || (t[10] = [h("span", { "aria-hidden": "true" }, "↻", -1)])])
 			])
-		]), h("div", ek, [r.value ? (S(), m("aside", tk, [
-			h("div", nk, [h("span", null, T(i.value === "pages" ? "页面导航" : "目录导航"), 1), h("strong", null, T(i.value === "pages" ? `${l.value} 页` : `${k.value} 项`), 1)]),
-			h("div", rk, [h("button", {
+		]), h("div", nk, [N.value && c.value ? (S(), m("aside", rk, [
+			h("div", ik, [h("span", null, T(l.value === "pages" ? "页面导航" : "目录导航"), 1), h("strong", null, T(l.value === "pages" ? `${O.value} 页` : `${P.value} 项`), 1)]),
+			h("div", ak, [h("button", {
 				type: "button",
 				role: "tab",
-				"aria-selected": i.value === "pages" ? "true" : "false",
-				class: v({ active: i.value === "pages" }),
-				onClick: t[2] || (t[2] = (e) => we("pages"))
-			}, " 页面 ", 10, ik), h("button", {
+				"aria-selected": l.value === "pages" ? "true" : "false",
+				class: v({ active: l.value === "pages" }),
+				onClick: t[2] || (t[2] = (e) => Ne("pages"))
+			}, " 页面 ", 10, ok), h("button", {
 				type: "button",
 				role: "tab",
-				"aria-selected": i.value === "outline" ? "true" : "false",
-				class: v({ active: i.value === "outline" }),
-				onClick: t[3] || (t[3] = (e) => we("outline"))
-			}, " 目录 ", 10, ak)]),
-			i.value === "pages" ? (S(), m("div", ok, [(S(!0), m(d, null, w(O.value, (e) => (S(), m("button", {
+				"aria-selected": l.value === "outline" ? "true" : "false",
+				class: v({ active: l.value === "outline" }),
+				onClick: t[3] || (t[3] = (e) => Ne("outline"))
+			}, " 目录 ", 10, sk)]),
+			l.value === "pages" ? (S(), m("div", ck, [(S(!0), m(d, null, w(ee.value, (e) => (S(), m("button", {
 				key: e,
-				class: v(["pdf-page-button", { "pdf-page-button--active": e === c.value }]),
+				class: v(["pdf-page-button", { "pdf-page-button--active": e === D.value }]),
 				type: "button",
-				onClick: (t) => Ce(e)
-			}, [h("span", ck, T(e), 1), h("span", lk, "第 " + T(e) + " 页", 1)], 10, sk))), 128))])) : (S(), m("div", uk, [(S(!0), m(d, null, w(A.value, (e) => (S(), m("button", {
+				onClick: (t) => Me(e)
+			}, [h("span", uk, T(e), 1), h("span", dk, "第 " + T(e) + " 页", 1)], 10, lk))), 128))])) : (S(), m("div", fk, [(S(!0), m(d, null, w(te.value, (e) => (S(), m("button", {
 				key: e.item.id,
 				class: "pdf-outline-button",
 				type: "button",
 				style: y({ "--outline-depth": e.depth }),
-				onClick: (t) => Ee(e.item)
+				onClick: (t) => Le(e.item)
 			}, [h("span", {
 				class: v(["pdf-outline-toggle", {
 					"pdf-outline-toggle--open": e.item.expanded,
 					"pdf-outline-toggle--empty": !e.item.items.length
 				}]),
 				"aria-hidden": "true",
-				onClick: E((t) => Te(e.item), ["stop"])
-			}, null, 10, fk), h("span", pk, T(e.item.title), 1)], 12, dk))), 128)), k.value ? p("", !0) : (S(), m("div", mk, " 当前 PDF 没有可用目录 "))]))
-		])) : p("", !0), h("div", hk, [h("div", {
+				onClick: E((t) => Ie(e.item), ["stop"])
+			}, null, 10, mk), h("span", hk, T(e.item.title), 1)], 12, pk))), 128)), P.value ? p("", !0) : (S(), m("div", gk, " 当前 PDF 没有可用目录 "))]))
+		])) : p("", !0), h("div", _k, [h("div", {
 			ref_key: "container",
-			ref: n,
+			ref: s,
 			class: "pdf-wrapper"
-		}, [t[9] || (t[9] = h("div", { class: "pdfViewer" }, null, -1)), o.value === "loading" ? (S(), m("div", gk, "正在加载 PDF...")) : o.value === "error" ? (S(), m("div", _k, T(s.value), 1)) : p("", !0)], 512)])])], 2));
+		}, [t[11] || (t[11] = h("div", { class: "pdfViewer" }, null, -1)), u.value === "loading" ? (S(), m("div", vk, "正在加载 PDF...")) : u.value === "error" ? (S(), m("div", yk, T(g.value), 1)) : p("", !0)], 512)])])], 2));
 	}
-}), [["__scopeId", "data-v-acd70827"]]);
+}), [["__scopeId", "data-v-c4719160"]]);
 //#endregion
-export { wk as default };
+export { Ek as default };

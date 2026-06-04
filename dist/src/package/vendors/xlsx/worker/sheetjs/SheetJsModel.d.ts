@@ -52,6 +52,10 @@ export default class SheetJsModel implements SheetModel {
     private get endRow();
     private get denseRows();
     private getCellAt;
+    private getAxisOffset;
+    private getMarkerLeft;
+    private getMarkerTop;
+    private getImages;
     private getAllMerge;
     private getData;
     private getCell;
