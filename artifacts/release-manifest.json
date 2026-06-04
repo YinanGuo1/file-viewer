@@ -1,15 +1,9 @@
 {
   "version": "1.0.17",
   "package": "@flyfish-group/file-viewer3",
-  "packageVersions": {
-    "@flyfish-group/file-viewer3": "1.0.17",
-    "@flyfish-group/file-viewer": "1.0.17",
-    "@flyfish-group/file-viewer-web": "1.0.17",
-    "@flyfish-group/file-viewer-react": "1.0.17"
-  },
-  "generatedAt": "2026-06-04T04:20:56.745Z",
+  "generatedAt": "2026-06-04T04:51:16.884Z",
   "sourceBranch": "v3",
-  "sourceCommit": "eb9be4f",
+  "sourceCommit": "a203d76",
   "adapterPackages": {
     "@flyfish-group/file-viewer-web": "1.0.17",
     "@flyfish-group/file-viewer-react": "1.0.17"
