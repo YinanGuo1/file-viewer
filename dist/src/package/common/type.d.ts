@@ -94,6 +94,32 @@ export interface FileViewerPdfOptions {
      * 初始页面旋转角度。会按 90 度归一化到 0 / 90 / 180 / 270。
      */
     rotation?: number;
+    /**
+     * 远端 PDF 是否优先交给 PDF.js 直接按 URL 渐进读取。
+     *
+     * 默认 `same-origin`，即同源 PDF 交给 PDF.js 通过 URL 渐进读取；
+     * 当文件服务支持 Range 时会进一步使用分片加载。跨域 URL 仍保持
+     * 旧的 Blob 下载后预览链路，最大化兼容鉴权下载和 CORS 场景。
+     * 设为 `true` 会对所有 URL 启用，设为 `false` 会完全禁用。
+     */
+    streaming?: boolean | 'same-origin';
+    /**
+     * PDF.js Range 请求的分片大小，默认 64KB；仅在文件服务支持 Range 时生效。
+     */
+    rangeChunkSize?: number;
+    /**
+     * PDF.js URL 读取 PDF 时是否携带浏览器凭据。
+     */
+    withCredentials?: boolean;
+}
+/**
+ * Typst 预览配置。
+ */
+export interface FileViewerTypstOptions {
+    /**
+     * Typst compiler WASM 地址。需要浏览器端编译时才会加载。
+     */
+    compilerWasmUrl?: string;
 }
 export type FileViewerSourceType = 'file' | 'url' | 'empty';
 export type FileViewerLifecyclePhase = 'load-start' | 'load-complete' | 'unload-start' | 'unload-complete';
@@ -142,6 +168,7 @@ export interface FileViewerOptions {
     toolbar?: boolean | FileViewerToolbarOptions;
     archive?: FileViewerArchiveOptions;
     pdf?: FileViewerPdfOptions;
+    typst?: FileViewerTypstOptions;
     /**
      * 文档加载/卸载生命周期钩子。直接使用 Vue 组件时可以传函数；
      * iframe 集成时同名事件会通过 `postMessage` 向宿主发送。
@@ -203,13 +230,18 @@ export interface FileRenderExportAdapter {
 export interface FileRenderContext {
     filename?: string;
     url?: string;
+    /**
+     * 渲染器可以直接读取的远端 URL。当前主要给 PDF.js 使用，
+     * 让同源 PDF 不必先整包下载为 Blob，就可以边拉取边建页。
+     */
+    streamUrl?: string;
     options?: FileViewerOptions;
     registerExportAdapter?: (adapter: FileRenderExportAdapter | null) => void;
 }
 /**
  * 文件处理逻辑，用于声明具体格式的异步渲染器。
  *
- * 渲染器只在命中文件扩展名时被按需加载，避免 PDF、OFD、压缩包、
+ * 渲染器只在命中文件扩展名时被按需加载，避免 PDF、OFD、Typst、压缩包、
  * 邮件、CAD、3D、Office 等重型依赖进入无关格式的首屏路径。
  *
  * @param buffer 二进制缓存

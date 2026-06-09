@@ -4,6 +4,7 @@ interface UseViewerExportOptions {
     activeExportAdapter: ShallowRef<FileRenderExportAdapter | null>;
     currentBuffer: Ref<ArrayBuffer | null>;
     currentFile: Ref<File | null>;
+    currentSourceUrl: Ref<string | null>;
     displayFilename: ComputedRef<string>;
     formatErrorMessage: (prefix: string, nextError: unknown) => string;
     operationAvailability: ComputedRef<FileViewerOperationAvailability>;
@@ -12,7 +13,7 @@ interface UseViewerExportOptions {
     showError: (message: string) => void;
     watermarkInlineStyle: ComputedRef<string>;
 }
-export declare const useViewerExport: ({ activeExportAdapter, currentBuffer, currentFile, displayFilename, formatErrorMessage, operationAvailability, output, runBeforeOperation, showError, watermarkInlineStyle }: UseViewerExportOptions) => {
+export declare const useViewerExport: ({ activeExportAdapter, currentBuffer, currentFile, currentSourceUrl, displayFilename, formatErrorMessage, operationAvailability, output, runBeforeOperation, showError, watermarkInlineStyle }: UseViewerExportOptions) => {
     downloadOriginalFile: () => Promise<void>;
     exportRenderedHtml: () => Promise<void>;
     printRenderedHtml: () => Promise<void>;

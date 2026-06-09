@@ -1,20 +1,18 @@
 import { n as e, t } from "./defineProperty.js";
 import { n, t as r } from "./objectSpread2.js";
 import { n as i, t as a } from "./asyncToGenerator.js";
-import { i as o, n as s, t as c } from "./wrapAsyncGenerator.js";
+import { i as o, o as s, r as c } from "./sourceLoading.js";
 import { t as l } from "./_plugin-vue_export-helper.js";
 import { n as u, r as d } from "./printLayout.js";
 import { t as f } from "./worker-ref.js";
 import { Fragment as p, computed as m, createCommentVNode as h, createElementBlock as g, createElementVNode as _, defineComponent as v, nextTick as y, normalizeClass as b, normalizeStyle as x, onBeforeUnmount as S, onMounted as C, openBlock as w, ref as T, renderList as E, toDisplayString as D, withModifiers as ee } from "vue";
-//#region \0@oxc-project+runtime@0.130.0/helpers/assertClassBrand.js
-i();
+e(), n(), i();
 function O(e, t, n) {
 	if (typeof e == "function" ? e === t : e.has(t)) return arguments.length < 3 ? t : n;
 	throw TypeError("Private element is not present on this object");
 }
 //#endregion
 //#region \0@oxc-project+runtime@0.130.0/helpers/checkPrivateRedeclaration.js
-e();
 function k(e, t) {
 	if (t.has(e)) throw TypeError("Cannot initialize the same private elements twice on an object");
 }
@@ -40,7 +38,6 @@ function N(e, t, n) {
 }
 //#endregion
 //#region \0@oxc-project+runtime@0.130.0/helpers/toSetter.js
-n();
 function P(e, t, n) {
 	t || (t = []);
 	var r = t.length++;
@@ -50,7 +47,7 @@ function P(e, t, n) {
 }
 //#endregion
 //#region node_modules/.pnpm/pdfjs-dist@5.7.284/node_modules/pdfjs-dist/legacy/build/pdf.mjs
-var F, te, ne, re, ie, ae, oe, se, ce, I, le, ue, de, fe, pe, me, he, ge, _e = {
+var F, te, ne, re, ie, ae, oe, se, ce, le, I, ue, de, fe, pe, me, he, ge, _e = {
 	9306(e, t, n) {
 		var r = n(4901), i = n(6823), a = TypeError;
 		e.exports = function(e) {
@@ -202,7 +199,7 @@ var F, te, ne, re, ie, ae, oe, se, ce, I, le, ue, de, fe, pe, me, he, ge, _e = {
 		}, ce = function(e) {
 			if (o(e) && (!g || m(E, e))) return e;
 			throw new O(u(e) + " is not a typed array constructor");
-		}, I = function(e, t, n, r) {
+		}, le = function(e, t, n, r) {
 			if (i) {
 				if (n) for (var o in ne) {
 					var s = a[o];
@@ -216,7 +213,7 @@ var F, te, ne, re, ie, ae, oe, se, ce, I, le, ue, de, fe, pe, me, he, ge, _e = {
 				}
 				(!D[e] || n) && f(D, e, n ? t : M && C[e] || t, r);
 			}
-		}, le = function(e, t, n) {
+		}, I = function(e, t, n) {
 			var r, o;
 			if (i) {
 				if (g) {
@@ -250,8 +247,8 @@ var F, te, ne, re, ie, ae, oe, se, ce, I, le, ue, de, fe, pe, me, he, ge, _e = {
 			TYPED_ARRAY_TAG: N && A,
 			aTypedArray: se,
 			aTypedArrayConstructor: ce,
-			exportTypedArrayMethod: I,
-			exportTypedArrayStaticMethod: le,
+			exportTypedArrayMethod: le,
+			exportTypedArrayStaticMethod: I,
 			getTypedArrayConstructor: ae,
 			isView: ie,
 			isTypedArray: oe,
@@ -12149,19 +12146,19 @@ var Wd = class {
 				styles: Object.create(null),
 				lang: null
 			};
-			var i = !1, a = !1, s;
+			var i = !1, a = !1, o;
 			try {
-				for (var c = o(n), l; i = !(l = yield c.next()).done; i = !1) {
+				for (var c = s(n), l; i = !(l = yield c.next()).done; i = !1) {
 					let e = l.value;
 					r.lang != null || (r.lang = e.lang), Object.assign(r.styles, e.styles), r.items.push(...e.items);
 				}
 			} catch (e) {
-				a = !0, s = e;
+				a = !0, o = e;
 			} finally {
 				try {
 					i && c.return != null && (yield c.return());
 				} finally {
-					if (a) throw s;
+					if (a) throw o;
 				}
 			}
 			return r;
@@ -15220,7 +15217,7 @@ var oh = /\r\n?|\n/g, sh = /* @__PURE__ */ new WeakMap(), ch = /* @__PURE__ */ n
 		super.resetAnnotationElement(e), e.resetEdited();
 	}
 };
-I = fh;
+le = fh;
 function ph(e) {
 	let t = (e) => {
 		this.editorDiv.style.fontSize = `calc(${e}px * var(--total-scale-factor))`, this.translate(0, -(e - j(uh, this)) * this.parentScale), N(uh, this, e), O(dh, this, gh).call(this);
@@ -15253,7 +15250,7 @@ function hh() {
 	let e = [];
 	this.editorDiv.normalize();
 	let t = null;
-	for (let n of this.editorDiv.childNodes) (t == null ? void 0 : t.nodeType) === Node.TEXT_NODE && n.nodeName === "BR" || (e.push(_h.call(I, n)), t = n);
+	for (let n of this.editorDiv.childNodes) (t == null ? void 0 : t.nodeType) === Node.TEXT_NODE && n.nodeName === "BR" || (e.push(_h.call(le, n)), t = n);
 	return e.join("\n");
 }
 function gh() {
@@ -16110,7 +16107,7 @@ var pg = /* @__PURE__ */ new WeakMap(), mg = /* @__PURE__ */ new WeakMap(), hg =
 		return !1;
 	}
 };
-le = Lg;
+I = Lg;
 function Rg() {
 	let e = new sg(j(bg, this), .001);
 	N(Dg, this, e.getOutlines()), [this.x, this.y, this.width, this.height] = j(Dg, this).box;
@@ -16136,10 +16133,10 @@ function zg({ highlightOutlines: e, highlightId: t, clipPathId: n }) {
 	else if (this.parent) {
 		let t = this.parent.viewport.rotation;
 		this.parent.drawLayer.updateProperties(j(Og, this), {
-			bbox: Gg.call(le, j(Dg, this).box, (t - this.rotation + 360) % 360),
+			bbox: Gg.call(I, j(Dg, this).box, (t - this.rotation + 360) % 360),
 			path: { d: e.toSVGPath() }
 		}), this.parent.drawLayer.updateProperties(j(Mg, this), {
-			bbox: Gg.call(le, j(Cg, this).box, t),
+			bbox: Gg.call(I, j(Cg, this).box, t),
 			path: { d: j(Cg, this).toSVGPath() }
 		});
 	}
@@ -16172,7 +16169,7 @@ function Bg(e) {
 		this.color = e, this.opacity = t, this.onUpdatedColor();
 	}, n = this.color, r = this.opacity;
 	this.addCommands({
-		cmd: t.bind(this, e, le._defaultOpacity),
+		cmd: t.bind(this, e, I._defaultOpacity),
 		undo: t.bind(this, n, r),
 		post: this._uiManager.updateUI.bind(this._uiManager, this),
 		mustExec: !0,
@@ -16258,7 +16255,7 @@ function Gg([e, t, n, r], i) {
 	];
 }
 function Kg(e) {
-	le._keyboardManager.exec(this, e);
+	I._keyboardManager.exec(this, e);
 }
 function qg(e) {
 	if (!j(vg, this)) return;
@@ -17462,8 +17459,8 @@ var Z_ = 8, Q_ = 3, $_ = class e {
 				let f = null, p = 0;
 				var t = !1, n = !1, r;
 				try {
-					for (var i = o(l), s; t = !(s = yield i.next()).done; t = !1) {
-						let e = s.value;
+					for (var i = s(l), o; t = !(o = yield i.next()).done; t = !1) {
+						let e = o.value;
 						f || (f = new Uint8Array(new Uint32Array(e.buffer, 0, 4)[0])), f.set(e, p), p += e.length;
 					}
 				} catch (e) {
@@ -19014,7 +19011,7 @@ var My, Ny, Py, Fy, Iy = {
 		}, ce = function(e) {
 			if (o(e) && (!g || m(E, e))) return e;
 			throw new O(u(e) + " is not a typed array constructor");
-		}, I = function(e, t, n, r) {
+		}, le = function(e, t, n, r) {
 			if (i) {
 				if (n) for (var o in ne) {
 					var s = a[o];
@@ -19028,7 +19025,7 @@ var My, Ny, Py, Fy, Iy = {
 				}
 				(!D[e] || n) && f(D, e, n ? t : M && C[e] || t, r);
 			}
-		}, le = function(e, t, n) {
+		}, I = function(e, t, n) {
 			var r, o;
 			if (i) {
 				if (g) {
@@ -19062,8 +19059,8 @@ var My, Ny, Py, Fy, Iy = {
 			TYPED_ARRAY_TAG: N && A,
 			aTypedArray: se,
 			aTypedArrayConstructor: ce,
-			exportTypedArrayMethod: I,
-			exportTypedArrayStaticMethod: le,
+			exportTypedArrayMethod: le,
+			exportTypedArrayStaticMethod: I,
 			getTypedArrayConstructor: ae,
 			isView: ie,
 			isTypedArray: oe,
@@ -22916,9 +22913,9 @@ var uw = class extends Array {
 		var n = this;
 		return a(function* () {
 			let r = [], i = !1;
-			var a = !1, s = !1, c;
+			var a = !1, o = !1, c;
 			try {
-				for (var l = o(n.bundles), u; a = !(u = yield l.next()).done; a = !1) {
+				for (var l = s(n.bundles), u; a = !(u = yield l.next()).done; a = !1) {
 					let n = u.value;
 					{
 						i = !0;
@@ -22931,12 +22928,12 @@ var uw = class extends Array {
 					}
 				}
 			} catch (e) {
-				s = !0, c = e;
+				o = !0, c = e;
 			} finally {
 				try {
 					a && l.return != null && (yield l.return());
 				} finally {
-					if (s) throw c;
+					if (o) throw c;
 				}
 			}
 			return !i && typeof console < "u" && console.warn(`[fluent] Request for keys failed because no resource bundles got generated.
@@ -23190,14 +23187,14 @@ My = kw;
 function Aw(e, t) {
 	var n = this;
 	return c(function* () {
-		let { baseURL: r, paths: i } = yield s(O(My, n, Mw).call(n)), a = [t];
+		let { baseURL: r, paths: i } = yield o(O(My, n, Mw).call(n)), a = [t];
 		if (e !== t) {
 			let n = t.split("-", 1)[0];
 			n !== t && a.push(n), a.push(e);
 		}
-		let o = a.map((e) => [e, O(My, n, jw).call(n, e, r, i)]);
-		for (let [e, t] of o) {
-			let r = yield s(t);
+		let s = a.map((e) => [e, O(My, n, jw).call(n, e, r, i)]);
+		for (let [e, t] of s) {
+			let r = yield o(t);
 			r ? yield r : e === "en-us" && (yield O(My, n, Pw).call(n, e));
 		}
 	})();
@@ -26628,9 +26625,7 @@ function GO(e) {
 var KO = { create() {
 	return f("pdf.worker.js").defaults(() => new GO());
 } };
-//#endregion
-//#region src/package/vendors/pdf/PdfView.vue?vue&type=script&setup=true&lang.ts
-i();
+i(), n();
 var qO = { class: "pdf-toolbar" }, JO = ["aria-pressed"], YO = { class: "pdf-toolbar-group" }, XO = ["disabled"], ZO = { class: "pdf-page-meter" }, QO = ["disabled"], $O = { class: "pdf-toolbar-group pdf-toolbar-group--zoom" }, ek = ["disabled"], tk = ["disabled"], nk = { class: "pdf-toolbar-group pdf-toolbar-group--rotate" }, rk = { class: "pdf-rotation-meter" }, ik = { class: "pdf-content" }, ak = {
 	key: 0,
 	class: "pdf-nav-pane"
@@ -26657,18 +26652,19 @@ var qO = { class: "pdf-toolbar" }, JO = ["aria-pressed"], YO = { class: "pdf-too
 	__name: "PdfView",
 	props: {
 		data: {},
+		url: {},
 		exportAdapter: { type: Function },
 		options: {}
 	},
 	setup(e) {
-		var t, n, r, i;
-		let o = e, s = T(null), c = T(((t = o.options) == null ? void 0 : t.navigation) === !1 ? !1 : ((n = o.options) == null ? void 0 : n.defaultNavigationVisible) !== !1), l = T("pages"), f = T("loading"), v = T(""), O = T(1), k = T(0), A = T(1), j = T(!0), M = T(me((r = (i = o.options) == null ? void 0 : i.rotation) == null ? 0 : r)), N = T([]), P = m(() => {
+		var t, n, i, o;
+		let s = e, c = T(null), l = T(((t = s.options) == null ? void 0 : t.navigation) === !1 ? !1 : ((n = s.options) == null ? void 0 : n.defaultNavigationVisible) !== !1), f = T("pages"), v = T("loading"), O = T(""), k = T(1), A = T(0), j = T(1), M = T(!0), N = T(he((i = (o = s.options) == null ? void 0 : o.rotation) == null ? 0 : i)), P = T([]), F = m(() => {
 			var e;
-			return ((e = o.options) == null ? void 0 : e.navigation) !== !1;
-		}), F = m(() => Array.from({ length: k.value }, (e, t) => t + 1)), te = m(() => {
+			return ((e = s.options) == null ? void 0 : e.navigation) !== !1;
+		}), te = m(() => Array.from({ length: A.value }, (e, t) => t + 1)), ne = m(() => {
 			let e = (t) => t.reduce((t, n) => t + 1 + e(n.items), 0);
-			return e(N.value);
-		}), ne = m(() => {
+			return e(P.value);
+		}), re = m(() => {
 			let e = [], t = (n, r) => {
 				n.forEach((n) => {
 					e.push({
@@ -26677,26 +26673,26 @@ var qO = { class: "pdf-toolbar" }, JO = ["aria-pressed"], YO = { class: "pdf-too
 					}), n.expanded && n.items.length && t(n.items, r + 1);
 				});
 			};
-			return t(N.value, 0), e;
-		}), re = m(() => `${Math.round(A.value * 100)}%`), ie = m(() => `${M.value}°`), ae = m(() => O.value > 1), oe = m(() => O.value < k.value), se = m(() => A.value > Sk), ce = m(() => A.value < Ck), I = {
+			return t(P.value, 0), e;
+		}), ie = m(() => `${Math.round(j.value * 100)}%`), ae = m(() => `${N.value}°`), oe = m(() => k.value > 1), se = m(() => k.value < A.value), ce = m(() => j.value > Sk), le = m(() => j.value < Ck), I = {
 			viewer: null,
 			linkService: null,
 			resource: null,
 			document: null,
 			search: ""
-		}, le = null, ue = 0, de = !1, fe = 0;
-		function pe() {
+		}, ue = null, de = 0, fe = !1, pe = 0;
+		function me() {
 			return typeof window > "u" || !("Worker" in window) ? null : sf.create({ port: KO.create() });
 		}
-		function me(e) {
+		function he(e) {
 			let t = (Math.round(e / 90) * 90 % 360 + 360) % 360;
 			return t === 90 || t === 180 || t === 270 ? t : 0;
 		}
-		function he(e) {
-			return ge.apply(this, arguments);
+		function ge(e) {
+			return _e.apply(this, arguments);
 		}
-		function ge() {
-			return ge = a(function* (e) {
+		function _e() {
+			return _e = a(function* (e) {
 				if (e) try {
 					yield e.loadingTask.destroy();
 				} catch (e) {
@@ -26705,14 +26701,14 @@ var qO = { class: "pdf-toolbar" }, JO = ["aria-pressed"], YO = { class: "pdf-too
 					var t;
 					(t = e.worker) == null || t.destroy();
 				}
-			}), ge.apply(this, arguments);
+			}), _e.apply(this, arguments);
 		}
-		function _e(e) {
+		function ve(e) {
 			return e.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 		}
-		function ve(e, t = "outline") {
+		function L(e, t = "outline") {
 			return e.map((e, n) => {
-				let r = `${t}-${n}`, i = Array.isArray(e.items) ? ve(e.items, r) : [];
+				let r = `${t}-${n}`, i = Array.isArray(e.items) ? L(e.items, r) : [];
 				return {
 					id: r,
 					title: e.title || `目录 ${n + 1}`,
@@ -26722,72 +26718,72 @@ var qO = { class: "pdf-toolbar" }, JO = ["aria-pressed"], YO = { class: "pdf-too
 				};
 			});
 		}
-		function L(e) {
-			return ye.apply(this, arguments);
+		function ye(e) {
+			return be.apply(this, arguments);
 		}
-		function ye() {
-			return ye = a(function* (e) {
+		function be() {
+			return be = a(function* (e) {
 				try {
 					let t = yield e.getOutline();
-					if (de || I.document !== e) return;
-					N.value = Array.isArray(t) ? ve(t) : [];
+					if (fe || I.document !== e) return;
+					P.value = Array.isArray(t) ? L(t) : [];
 				} catch (e) {
-					console.warn("PDF 大纲读取失败", e), N.value = [];
+					console.warn("PDF 大纲读取失败", e), P.value = [];
 				}
-			}), ye.apply(this, arguments);
+			}), be.apply(this, arguments);
 		}
-		function be(e, t, n) {
+		function xe(e, t, n) {
 			let r = n === "print" ? 1.75 : 1.5, i = Math.sqrt(Dk / Math.max(e * t, 1));
 			return Math.max(.75, Math.min(r, i));
 		}
-		function xe() {
-			return Se.apply(this, arguments);
-		}
 		function Se() {
-			return Se = a(function* (e = 1) {
+			return Ce.apply(this, arguments);
+		}
+		function Ce() {
+			return Ce = a(function* (e = 1) {
 				var t;
 				let n = I.document;
 				if (!n) throw Error("PDF 尚未加载完成，请稍后再试");
 				let r = yield n.getPage(Math.min(Math.max(e, 1), n.numPages)), i = r.getViewport({
 					scale: yt.PDF_TO_CSS_UNITS,
-					rotation: M.value
+					rotation: N.value
 				});
 				return (t = r.cleanup) == null || t.call(r), {
 					width: Math.ceil(i.width),
 					height: Math.ceil(i.height)
 				};
-			}), Se.apply(this, arguments);
-		}
-		function Ce() {
-			return we.apply(this, arguments);
+			}), Ce.apply(this, arguments);
 		}
 		function we() {
-			return we = a(function* () {
-				let e = yield xe();
+			return Te.apply(this, arguments);
+		}
+		function Te() {
+			return Te = a(function* () {
+				let e = yield Se();
 				return u({
 					selector: ".viewer-export-content .pdf-export-page",
 					width: e.width,
 					height: e.height
 				});
-			}), we.apply(this, arguments);
+			}), Te.apply(this, arguments);
 		}
-		function Te(e) {
-			return Ee.apply(this, arguments);
+		function Ee(e) {
+			return R.apply(this, arguments);
 		}
-		function Ee() {
-			return Ee = a(function* (e) {
+		function R() {
+			return R = a(function* (e) {
 				let t = I.document;
 				if (!t) throw Error("PDF 尚未加载完成，请稍后再试");
 				let n = [];
 				for (let i = 1; i <= t.numPages; i += 1) {
 					var r;
-					if (de) throw Error("PDF 已卸载，无法继续打印");
+					if (fe) throw Error("PDF 已卸载，无法继续打印");
 					let a = yield t.getPage(i), o = a.getViewport({
 						scale: yt.PDF_TO_CSS_UNITS,
-						rotation: M.value
-					}), s = Math.ceil(o.width), c = Math.ceil(o.height), l = be(o.width, o.height, e.mode), u = a.getViewport({
+						rotation: N.value
+					}), s = Math.ceil(o.width), c = Math.ceil(o.height), l = xe(o.width, o.height, e.mode), u = a.getViewport({
 						scale: yt.PDF_TO_CSS_UNITS * l,
-						rotation: M.value
+						rotation: N.value
 					}), f = document.createElement("canvas"), p = f.getContext("2d");
 					if (!p) throw Error("当前浏览器无法创建 PDF 打印画布");
 					f.width = Math.ceil(u.width), f.height = Math.ceil(u.height), yield a.render({
@@ -26801,177 +26797,180 @@ var qO = { class: "pdf-toolbar" }, JO = ["aria-pressed"], YO = { class: "pdf-too
 						`width:${d(s)}`,
 						`height:${d(c)}`
 					].join(";");
-					n.push(`<section class="pdf-export-page viewer-print-page" style="${h}" aria-label="${_e(m)}"><img src="${f.toDataURL("image/png")}" alt="${_e(m)}" /></section>`), f.width = 0, f.height = 0, (r = a.cleanup) == null || r.call(a);
+					n.push(`<section class="pdf-export-page viewer-print-page" style="${h}" aria-label="${ve(m)}"><img src="${f.toDataURL("image/png")}" alt="${ve(m)}" /></section>`), f.width = 0, f.height = 0, (r = a.cleanup) == null || r.call(a);
 				}
 				return `<div class="pdf-export-document">${n.join("")}</div>`;
-			}), Ee.apply(this, arguments);
-		}
-		function R() {
-			return z.apply(this, arguments);
+			}), R.apply(this, arguments);
 		}
 		function z() {
-			return z = a(function* () {
+			return De.apply(this, arguments);
+		}
+		function De() {
+			return De = a(function* () {
 				var e;
-				if (!s.value) return;
-				let t = ++fe;
-				f.value = "loading", v.value = "", I.document = null, N.value = [], (e = o.exportAdapter) == null || e.call(o, null);
+				if (!c.value) return;
+				let t = ++pe;
+				v.value = "loading", O.value = "", I.document = null, P.value = [], (e = s.exportAdapter) == null || e.call(s, null);
 				let n = null;
 				try {
-					var r;
-					if (de || t !== fe || !s.value) return;
-					let e = new ZS(), i = new jS({ eventBus: e }), a = new cS({
+					var i, a, o;
+					if (fe || t !== pe || !c.value) return;
+					let e = new ZS(), l = new jS({ eventBus: e }), u = new cS({
 						eventBus: e,
-						linkService: i,
+						linkService: l,
 						updateMatchesCountOnProgress: !0
-					}), c = new CO({
-						container: s.value,
+					}), d = new CO({
+						container: c.value,
 						eventBus: e,
-						linkService: i,
-						findController: a,
+						linkService: l,
+						findController: u,
 						l10n: new kw("zh-CN"),
 						enableAutoLinking: !1
 					});
-					I.viewer = c, I.linkService = i, i.setViewer(c), e.on("pagesinit", () => {
-						Fe(M.value), je(), f.value = "ready", I.search && e.dispatch("find", {
+					if (I.viewer = d, I.linkService = l, l.setViewer(d), e.on("pagesinit", () => {
+						Ie(N.value), Me(), v.value = "ready", I.search && e.dispatch("find", {
 							type: "",
 							query: I.search
 						});
 					}), e.on("pagechanging", ({ pageNumber: e }) => {
-						O.value = e;
+						k.value = e;
 					}), e.on("scalechanging", ({ scale: e }) => {
-						A.value = ke(e);
-					});
-					let l = pe(), u = Ud({
-						data: o.data,
-						worker: l || void 0,
+						j.value = Ae(e);
+					}), !s.url && !s.data) throw Error("PDF 缺少可读取的数据源");
+					let f = me(), p = Ud(r(r({}, s.url ? {
+						url: s.url,
+						rangeChunkSize: ((i = s.options) == null ? void 0 : i.rangeChunkSize) || 65536,
+						withCredentials: ((a = s.options) == null ? void 0 : a.withCredentials) === !0
+					} : { data: s.data }), {}, {
+						worker: f || void 0,
 						cMapUrl: `https://npm.onmicrosoft.cn/pdfjs-dist@${jf}/cmaps/`,
 						wasmUrl: `https://npm.onmicrosoft.cn/pdfjs-dist@${jf}/wasm/`,
 						useWorkerFetch: !0,
 						cMapPacked: !0,
 						enableXfa: !0
-					});
+					}));
 					n = {
-						loadingTask: u,
-						worker: l
+						loadingTask: p,
+						worker: f
 					}, I.resource = n;
-					let d = yield u.promise;
-					if (de || t !== fe || I.resource !== n) {
-						I.resource === n && (I.resource = null, yield he(n));
+					let m = yield p.promise;
+					if (fe || t !== pe || I.resource !== n) {
+						I.resource === n && (I.resource = null, yield ge(n));
 						return;
 					}
-					k.value = d.numPages, O.value = 1, I.document = d, (r = o.exportAdapter) == null || r.call(o, {
+					A.value = m.numPages, k.value = 1, I.document = m, (o = s.exportAdapter) == null || o.call(s, {
 						includeDocumentStyles: !1,
-						printStyle: Ce,
-						toHtml: Te
-					}), L(d), c.setDocument(d), i.setDocument(d, null);
+						printStyle: we,
+						toHtml: Ee
+					}), ye(m), d.setDocument(m), l.setDocument(m, null);
 				} catch (e) {
-					if (I.resource === n && (I.resource = null, he(n)), de || t !== fe) return;
-					f.value = "error", v.value = e instanceof Error ? e.message : "PDF 加载失败";
+					if (I.resource === n && (I.resource = null, ge(n)), fe || t !== pe) return;
+					v.value = "error", O.value = e instanceof Error ? e.message : "PDF 加载失败";
 				}
-			}), z.apply(this, arguments);
+			}), De.apply(this, arguments);
 		}
-		function De(e) {
+		function Oe(e) {
 			var t;
 			let n = e.getPageView(0), r = n == null ? void 0 : n.pdfPage;
 			if (r) return r.getViewport({
 				scale: yt.PDF_TO_CSS_UNITS,
-				rotation: M.value
+				rotation: N.value
 			}).width;
 			let i = n == null || (t = n.viewport) == null ? void 0 : t.width;
-			return i && A.value ? i / A.value : 0;
-		}
-		function Oe(e) {
-			var t;
-			let n = De(e), r = ((t = s.value) == null ? void 0 : t.clientWidth) || window.innerWidth, i = Math.max(r - Tk - Ek, 96);
-			return n ? ke(i / n) : 1;
+			return i && j.value ? i / j.value : 0;
 		}
 		function ke(e) {
-			return Number(Math.min(Ck, Math.max(Sk, e)).toFixed(2));
+			var t;
+			let n = Oe(e), r = ((t = c.value) == null ? void 0 : t.clientWidth) || window.innerWidth, i = Math.max(r - Tk - Ek, 96);
+			return n ? Ae(i / n) : 1;
 		}
 		function Ae(e) {
-			if (!I.viewer) return;
-			let t = ke(e);
-			I.viewer.currentScale = t, A.value = t;
+			return Number(Math.min(Ck, Math.max(Sk, e)).toFixed(2));
 		}
-		function je() {
-			I.viewer && (j.value = !0, Ae(Oe(I.viewer)), y(() => {
-				var e;
-				(e = I.viewer) == null || e.update();
-			}));
+		function je(e) {
+			if (!I.viewer) return;
+			let t = Ae(e);
+			I.viewer.currentScale = t, j.value = t;
 		}
 		function Me() {
-			!j.value || !I.viewer || typeof window > "u" || (window.cancelAnimationFrame(ue), ue = window.requestAnimationFrame(() => {
-				je();
+			I.viewer && (M.value = !0, je(ke(I.viewer)), y(() => {
+				var e;
+				(e = I.viewer) == null || e.update();
 			}));
 		}
 		function Ne() {
-			j.value = !1, Ae(A.value + wk);
+			!M.value || !I.viewer || typeof window > "u" || (window.cancelAnimationFrame(de), de = window.requestAnimationFrame(() => {
+				Me();
+			}));
 		}
 		function Pe() {
-			j.value = !1, Ae(A.value - wk);
+			M.value = !1, je(j.value + wk);
 		}
-		function Fe(e) {
-			let t = me(e);
-			M.value = t, I.viewer && (I.viewer.pagesRotation = t, y(() => {
+		function Fe() {
+			M.value = !1, je(j.value - wk);
+		}
+		function Ie(e) {
+			let t = he(e);
+			N.value = t, I.viewer && (I.viewer.pagesRotation = t, y(() => {
 				var e;
-				if (j.value) {
-					je();
+				if (M.value) {
+					Me();
 					return;
 				}
 				(e = I.viewer) == null || e.update();
 			}));
-		}
-		function Ie() {
-			Fe(M.value - 90);
 		}
 		function Le() {
-			Fe(M.value + 90);
+			Ie(N.value - 90);
 		}
-		function Re(e) {
-			if (!I.viewer || !k.value) return;
-			let t = Math.min(k.value, Math.max(1, e));
-			I.viewer.currentPageNumber = t, O.value = t;
+		function Re() {
+			Ie(N.value + 90);
 		}
 		function ze(e) {
-			l.value = e;
+			if (!I.viewer || !A.value) return;
+			let t = Math.min(A.value, Math.max(1, e));
+			I.viewer.currentPageNumber = t, k.value = t;
 		}
-		function B() {
-			P.value && (c.value = !c.value, y(() => {
+		function B(e) {
+			f.value = e;
+		}
+		function Be() {
+			F.value && (l.value = !l.value, y(() => {
 				var e;
-				if (j.value) {
-					je();
+				if (M.value) {
+					Me();
 					return;
 				}
 				(e = I.viewer) == null || e.update();
 			}));
 		}
-		function Be() {
-			je();
-		}
-		function Ve(e) {
-			e.items.length && (e.expanded = !e.expanded);
+		function Ve() {
+			Me();
 		}
 		function He(e) {
+			e.items.length && (e.expanded = !e.expanded);
+		}
+		function Ue(e) {
 			!e.dest || !I.linkService || I.linkService.goToDestination(e.dest);
 		}
 		return C(() => {
-			R(), s.value && (le = new ResizeObserver(() => {
-				Me();
-			}), le.observe(s.value));
+			z(), c.value && (ue = new ResizeObserver(() => {
+				Ne();
+			}), ue.observe(c.value));
 		}), S(() => {
 			var e;
-			de = !0, fe += 1, window.cancelAnimationFrame(ue), le == null || le.disconnect(), le = null, I.viewer = null, I.linkService = null, I.document = null, N.value = [], (e = o.exportAdapter) == null || e.call(o, null);
+			fe = !0, pe += 1, window.cancelAnimationFrame(de), ue == null || ue.disconnect(), ue = null, I.viewer = null, I.linkService = null, I.document = null, P.value = [], (e = s.exportAdapter) == null || e.call(s, null);
 			let t = I.resource;
-			I.resource = null, he(t);
-		}), (e, t) => (w(), g("div", { class: b(["pdf-shell", { "pdf-shell--nav-hidden": !P.value || !c.value }]) }, [_("div", qO, [
-			P.value ? (w(), g("button", {
+			I.resource = null, ge(t);
+		}), (e, t) => (w(), g("div", { class: b(["pdf-shell", { "pdf-shell--nav-hidden": !F.value || !l.value }]) }, [_("div", qO, [
+			F.value ? (w(), g("button", {
 				key: 0,
-				class: b(["pdf-icon-button", { "pdf-icon-button--active": c.value }]),
+				class: b(["pdf-icon-button", { "pdf-icon-button--active": l.value }]),
 				type: "button",
 				title: "切换导航窗格",
 				"aria-label": "切换导航窗格",
-				"aria-pressed": c.value,
-				onClick: B
+				"aria-pressed": l.value,
+				onClick: Be
 			}, [...t[4] || (t[4] = [_("span", { class: "pdf-panel-icon" }, null, -1)])], 10, JO)) : h("", !0),
 			_("div", YO, [
 				_("button", {
@@ -26979,17 +26978,17 @@ var qO = { class: "pdf-toolbar" }, JO = ["aria-pressed"], YO = { class: "pdf-too
 					type: "button",
 					title: "上一页",
 					"aria-label": "上一页",
-					disabled: !ae.value,
-					onClick: t[0] || (t[0] = (e) => Re(O.value - 1))
+					disabled: !oe.value,
+					onClick: t[0] || (t[0] = (e) => ze(k.value - 1))
 				}, [...t[5] || (t[5] = [_("span", { "aria-hidden": "true" }, "‹", -1)])], 8, XO),
-				_("span", ZO, [_("strong", null, D(O.value), 1), _("span", null, "/ " + D(k.value || "-"), 1)]),
+				_("span", ZO, [_("strong", null, D(k.value), 1), _("span", null, "/ " + D(A.value || "-"), 1)]),
 				_("button", {
 					class: "pdf-icon-button",
 					type: "button",
 					title: "下一页",
 					"aria-label": "下一页",
-					disabled: !oe.value,
-					onClick: t[1] || (t[1] = (e) => Re(O.value + 1))
+					disabled: !se.value,
+					onClick: t[1] || (t[1] = (e) => ze(k.value + 1))
 				}, [...t[6] || (t[6] = [_("span", { "aria-hidden": "true" }, "›", -1)])], 8, QO)
 			]),
 			_("div", $O, [
@@ -26998,22 +26997,22 @@ var qO = { class: "pdf-toolbar" }, JO = ["aria-pressed"], YO = { class: "pdf-too
 					type: "button",
 					title: "缩小",
 					"aria-label": "缩小",
-					disabled: !se.value,
-					onClick: Pe
+					disabled: !ce.value,
+					onClick: Fe
 				}, [...t[7] || (t[7] = [_("span", { "aria-hidden": "true" }, "−", -1)])], 8, ek),
 				_("button", {
 					class: "pdf-scale-button",
 					type: "button",
 					title: "适合宽度",
-					onClick: Be
-				}, D(re.value), 1),
+					onClick: Ve
+				}, D(ie.value), 1),
 				_("button", {
 					class: "pdf-icon-button",
 					type: "button",
 					title: "放大",
 					"aria-label": "放大",
-					disabled: !ce.value,
-					onClick: Ne
+					disabled: !le.value,
+					onClick: Pe
 				}, [...t[8] || (t[8] = [_("span", { "aria-hidden": "true" }, "+", -1)])], 8, tk)
 			]),
 			_("div", nk, [
@@ -27022,57 +27021,57 @@ var qO = { class: "pdf-toolbar" }, JO = ["aria-pressed"], YO = { class: "pdf-too
 					type: "button",
 					title: "向左旋转",
 					"aria-label": "向左旋转",
-					onClick: Ie
+					onClick: Le
 				}, [...t[9] || (t[9] = [_("span", { "aria-hidden": "true" }, "↺", -1)])]),
-				_("span", rk, D(ie.value), 1),
+				_("span", rk, D(ae.value), 1),
 				_("button", {
 					class: "pdf-icon-button",
 					type: "button",
 					title: "向右旋转",
 					"aria-label": "向右旋转",
-					onClick: Le
+					onClick: Re
 				}, [...t[10] || (t[10] = [_("span", { "aria-hidden": "true" }, "↻", -1)])])
 			])
-		]), _("div", ik, [P.value && c.value ? (w(), g("aside", ak, [
-			_("div", ok, [_("span", null, D(l.value === "pages" ? "页面导航" : "目录导航"), 1), _("strong", null, D(l.value === "pages" ? `${k.value} 页` : `${te.value} 项`), 1)]),
+		]), _("div", ik, [F.value && l.value ? (w(), g("aside", ak, [
+			_("div", ok, [_("span", null, D(f.value === "pages" ? "页面导航" : "目录导航"), 1), _("strong", null, D(f.value === "pages" ? `${A.value} 页` : `${ne.value} 项`), 1)]),
 			_("div", sk, [_("button", {
 				type: "button",
 				role: "tab",
-				"aria-selected": l.value === "pages" ? "true" : "false",
-				class: b({ active: l.value === "pages" }),
-				onClick: t[2] || (t[2] = (e) => ze("pages"))
+				"aria-selected": f.value === "pages" ? "true" : "false",
+				class: b({ active: f.value === "pages" }),
+				onClick: t[2] || (t[2] = (e) => B("pages"))
 			}, " 页面 ", 10, ck), _("button", {
 				type: "button",
 				role: "tab",
-				"aria-selected": l.value === "outline" ? "true" : "false",
-				class: b({ active: l.value === "outline" }),
-				onClick: t[3] || (t[3] = (e) => ze("outline"))
+				"aria-selected": f.value === "outline" ? "true" : "false",
+				class: b({ active: f.value === "outline" }),
+				onClick: t[3] || (t[3] = (e) => B("outline"))
 			}, " 目录 ", 10, lk)]),
-			l.value === "pages" ? (w(), g("div", uk, [(w(!0), g(p, null, E(F.value, (e) => (w(), g("button", {
+			f.value === "pages" ? (w(), g("div", uk, [(w(!0), g(p, null, E(te.value, (e) => (w(), g("button", {
 				key: e,
-				class: b(["pdf-page-button", { "pdf-page-button--active": e === O.value }]),
+				class: b(["pdf-page-button", { "pdf-page-button--active": e === k.value }]),
 				type: "button",
-				onClick: (t) => Re(e)
-			}, [_("span", fk, D(e), 1), _("span", pk, "第 " + D(e) + " 页", 1)], 10, dk))), 128))])) : (w(), g("div", mk, [(w(!0), g(p, null, E(ne.value, (e) => (w(), g("button", {
+				onClick: (t) => ze(e)
+			}, [_("span", fk, D(e), 1), _("span", pk, "第 " + D(e) + " 页", 1)], 10, dk))), 128))])) : (w(), g("div", mk, [(w(!0), g(p, null, E(re.value, (e) => (w(), g("button", {
 				key: e.item.id,
 				class: "pdf-outline-button",
 				type: "button",
 				style: x({ "--outline-depth": e.depth }),
-				onClick: (t) => He(e.item)
+				onClick: (t) => Ue(e.item)
 			}, [_("span", {
 				class: b(["pdf-outline-toggle", {
 					"pdf-outline-toggle--open": e.item.expanded,
 					"pdf-outline-toggle--empty": !e.item.items.length
 				}]),
 				"aria-hidden": "true",
-				onClick: ee((t) => Ve(e.item), ["stop"])
-			}, null, 10, gk), _("span", _k, D(e.item.title), 1)], 12, hk))), 128)), te.value ? h("", !0) : (w(), g("div", vk, " 当前 PDF 没有可用目录 "))]))
+				onClick: ee((t) => He(e.item), ["stop"])
+			}, null, 10, gk), _("span", _k, D(e.item.title), 1)], 12, hk))), 128)), ne.value ? h("", !0) : (w(), g("div", vk, " 当前 PDF 没有可用目录 "))]))
 		])) : h("", !0), _("div", yk, [_("div", {
 			ref_key: "container",
-			ref: s,
+			ref: c,
 			class: "pdf-wrapper"
-		}, [t[11] || (t[11] = _("div", { class: "pdfViewer" }, null, -1)), f.value === "loading" ? (w(), g("div", bk, "正在加载 PDF...")) : f.value === "error" ? (w(), g("div", xk, D(v.value), 1)) : h("", !0)], 512)])])], 2));
+		}, [t[11] || (t[11] = _("div", { class: "pdfViewer" }, null, -1)), v.value === "loading" ? (w(), g("div", bk, "正在加载 PDF...")) : v.value === "error" ? (w(), g("div", xk, D(O.value), 1)) : h("", !0)], 512)])])], 2));
 	}
-}), [["__scopeId", "data-v-7770d843"]]);
+}), [["__scopeId", "data-v-04cf6787"]]);
 //#endregion
 export { Ok as default };

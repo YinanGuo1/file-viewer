@@ -3,4 +3,4 @@
  * @param buffer 二进制数据
  * @param target 目标
  */
-export default function renderPptx(buffer: ArrayBuffer, target: HTMLDivElement): Promise<import('vue').ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import('vue').ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}, {}, {}, string, import('vue').ComponentProvideOptions>, {}, {}, "", {}, any>>;
+export default function renderPptx(buffer: ArrayBuffer, target: HTMLDivElement, type?: string): Promise<import('vue').ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import('vue').ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}, {}, {}, string, import('vue').ComponentProvideOptions>, {}, {}, "", {}, any>>;

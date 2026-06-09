@@ -1,6 +1,7 @@
 import { FileRenderExportAdapter, FileViewerPdfOptions } from '../../common/type';
 type __VLS_Props = {
-    data: ArrayBuffer;
+    data?: ArrayBuffer;
+    url?: string;
     exportAdapter?: (adapter: FileRenderExportAdapter | null) => void;
     options?: FileViewerPdfOptions;
 };

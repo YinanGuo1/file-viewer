@@ -10,6 +10,7 @@ PDF、CAD、3D 模型、绘图、音频、EPUB、MSG 等样例使用项目方提
 
 - `test.doc`: 验证 `.doc` 老文档与 Word 风格页面容器
 - `word.docx`: 验证现代 Word 文档链路
+- `template.dot`: 复用老 Word 二进制样本验证 `.dot` 模板兼容入口
 - `excel.xlsx`: 验证 `xlsx` 样式能力
 - `excel.xlsm`: 验证 `xlsm` 扩展名入口
 - `excel.xlsb`: 验证 `xlsb` 扩展名入口
@@ -21,6 +22,7 @@ PDF、CAD、3D 模型、绘图、音频、EPUB、MSG 等样例使用项目方提
 - `ppt.pptx`: 验证 `pptx` 幻灯片渲染、组合图形、主题背景和图片资源
 - `pdf.pdf`: 使用项目方提供的 13 页《PDF沉浸式翻译技术说明》验证长文档阅读、缩放工具栏、页面/目录导航、完整打印和 HTML 导出
 - `ofd.ofd`: 验证 `ofd.js` 在线预览
+- `report.typ`: 验证 Typst 源文件直接读取、浏览器 WASM 编译、按页预览、打印和 HTML 导出链路
 - `drawing.dxf`: 使用公开 DXF CAD 样例验证图纸预览
 - `sample.dwg`: 使用公开 DWG 样例验证 DWG 兼容预览和原因提示
 - `model.gltf`: 使用项目内最小 glTF 验证 Web 3D 预览
@@ -94,6 +96,7 @@ PDF、CAD、3D 模型、绘图、音频、EPUB、MSG 等样例使用项目方提
 | 文件 | 公开来源 | 许可 |
 | --- | --- | --- |
 | `drawing.dxf` | `mozman/ezdxf` 的 `examples_dxf/wipeout_door.dxf` | MIT |
+| `template.dot` | 复用项目内 `test.doc` fixture 并以 Word 97-2003 模板扩展名保存 | Apache-2.0 |
 | `pdf.pdf` | 项目方提供的《PDF沉浸式翻译技术说明》真实示例文档 | 项目 Demo 授权 |
 | `sample.dwg` | `dshn06/cad-webviewer-unity` 的 `baseline-sample.dwg` | MIT |
 | `model.gltf` / `model.obj` / `model.stl` / `model.ply` / `model.step` | 项目内生成的最小 3D fixture | Apache-2.0 |
@@ -104,6 +107,7 @@ PDF、CAD、3D 模型、绘图、音频、EPUB、MSG 等样例使用项目方提
 | `sample.eml` | 项目内生成的标准 MIME 邮件 fixture | Apache-2.0 |
 | `sample.msg` | `HiraokaHyperTools/msgreader` 的 `test/A memo.msg` | MIT |
 | `sample.olb` / `sample.dra` | 项目内生成的 CFB EDA fixture | Apache-2.0 |
+| `report.typ` | 项目内编写的 Typst 多页文档 fixture | Apache-2.0 |
 | `audio.mp3` | MDN interactive examples 的 `t-rex-roar.mp3` | CC0 |
 | `audio.ogg` | Wikimedia Commons 的 `Example.ogg` | CC BY-SA 3.0 |
 | `book.epub` | Project Gutenberg 的 `Alice's Adventures in Wonderland` EPUB | Public domain in the USA |
@@ -119,5 +123,7 @@ DWG 当前作为 CAD 兼容入口保留，`sample.dwg` 已换成真实公开 DWG
 `flow.excalidraw` 与 `process.drawio` 用于验证绘图类文本格式。Excalidraw 使用官方 `@excalidraw/excalidraw` 的 `restore` 与 `exportToSvg`，draw.io 使用官方 diagrams.net `GraphViewer`，组件本身只做按需加载、容器挂载和错误提示。
 
 `audio.mp3` 与 `audio.ogg` 用于验证浏览器原生音频播放能力；`book.epub` 用于验证 `epubjs` 的目录、章节资源和滚动阅读能力；`book.umd` 用于验证早期移动电子书的文件头、元数据、章节偏移、章节标题和 zlib 正文段。
+
+`report.typ` 用于验证 Typst 文档入口，示例包含标题、指标块、表格、数学公式、代码块和多页输出。线上 Demo 会直接读取该源文件，通过浏览器端 WASM 编译与 SVG 渲染链路完成预览、打印和 HTML 导出。
 
 `archive.zip` 与 `archive.tar.gz` 用于验证 `libarchive.js` 的 Worker 目录读取、按需解压、IndexedDB 缓存和压缩包内文件继续预览。`sample.eml` 与 `sample.msg` 用于验证邮件头信息、HTML/文本正文、附件下载和附件预览。`sample.olb` 与 `sample.dra` 是 CFB 容器夹具，用于验证 OLB / DRA 的结构树、对象候选、属性、文本片段和可读字符串预览。
