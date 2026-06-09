@@ -1,0 +1,29 @@
+{
+  "version": "1.0.21",
+  "package": "@flyfish-group/file-viewer3",
+  "generatedAt": "2026-06-09T07:46:10.110Z",
+  "sourceBranch": "v3",
+  "sourceCommit": "89976f5",
+  "adapterPackages": {
+    "@flyfish-group/file-viewer-web": "1.0.21",
+    "@flyfish-group/file-viewer-react": "1.0.21"
+  },
+  "vue2Package": {
+    "name": "@flyfish-group/file-viewer",
+    "version": "1.0.21",
+    "tarball": "flyfish-group-file-viewer-1.0.21.tgz"
+  },
+  "publicRepo": "/Users/wangyu/IdeaProjects/file-viewer-public",
+  "artifactOnly": true,
+  "allowedRoots": [
+    "README.md",
+    "LICENSE",
+    "package.json",
+    "dist",
+    "demo",
+    "adapter-demo",
+    "docs",
+    "example",
+    "artifacts"
+  ]
+}
