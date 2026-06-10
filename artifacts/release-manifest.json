@@ -17,6 +17,7 @@
   "artifactOnly": true,
   "allowedRoots": [
     "README.md",
+    "README.en.md",
     "LICENSE",
     "package.json",
     "dist",

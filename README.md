@@ -1,5 +1,7 @@
 # Flyfish Viewer
 
+[简体中文](README.md) | [English](README.en.md)
+
 把 Word、Excel、PPT、PDF、Typst、压缩包、邮件、音频和电子书稳稳带进浏览器里。
 
 `@flyfish-group/file-viewer3` 是一款基于 Vue 3、TypeScript 和 Vite 构建的纯前端文件预览组件。Vue2.7 项目请使用同能力包 `@flyfish-group/file-viewer`。两条 npm 包线保持一致的格式覆盖、示例体验和 API 语义，Vue3 构建产物作为 React、纯 Web 和其他适配层的统一预览基线。
@@ -13,7 +15,7 @@
 - 官方文档: [doc.flyfish.dev](https://doc.flyfish.dev)
 - 在线 Demo: [viewer.flyfish.dev](https://viewer.flyfish.dev)
 - 文档比对 Demo: [viewer.flyfish.dev/compare.html](https://viewer.flyfish.dev/compare.html)
-- Docker 镜像发布目标: `flyfishdev/file-viewer:1.0.20`
+- Docker 镜像发布目标: `flyfishdev/file-viewer:1.0.21`
 - 公开成品仓库(GitHub): [github.com/flyfish-dev/file-viewer](https://github.com/flyfish-dev/file-viewer)
 - 公开成品仓库(Gitee): [gitee.com/flyfish-dev/file-viewer](https://gitee.com/flyfish-dev/file-viewer)
 - 源码自助开通: [https://dev.flyfish.group/shop](https://dev.flyfish.group/shop)
@@ -45,7 +47,7 @@ Vue3、Vue2、React 和纯 JS tarball 都会随公开成品仓库一起生成。
 - **纯前端 Serverless。** 文档解析和展示全部在浏览器内完成，部署简单，不依赖 Office 服务端、LibreOffice 守护进程或额外转码链路。
 - **格式覆盖完整。** 当前内置 149 个扩展名映射，覆盖 Word、Excel、PowerPoint、PDF、OFD、Typst、压缩包、邮件、OLB/DRA、CAD、3D 模型、Excalidraw、draw.io、EPUB、UMD、Markdown、图片、音频、代码/文本和 MP4，能覆盖绝大多数业务附件场景。
 - **按需异步加载。** PDF、OFD、Typst、压缩包、邮件、OLB/DRA、CAD、3D 模型、绘图、Office、EPUB、UMD、Markdown 和代码高亮渲染器都按需加载，重型解析依赖不会进入其他格式的首屏路径。
-- **预览器操作完整。** 内置下载原文件、打印完整渲染结果、导出渲染后 HTML、水印开关和水印 options；打印按钮会按当前格式和渲染链路动态显隐，Word / PDF 使用专属完整页导出适配器，不依赖当前视口，适合合同、归档和审批类场景。
+- **预览器操作完整。** 内置下载原文件、打印完整渲染结果、导出渲染后 HTML、水印开关、水印 options 和主题 options；`theme` 支持 `light`、`dark`、`system`，默认跟随系统，浅色业务 UI 可显式锁定 `light`；打印按钮会按当前格式和渲染链路动态显隐，Word / PDF 使用专属完整页导出适配器，不依赖当前视口，适合合同、归档和审批类场景。
 - **集成控制更完整。** 提供加载/卸载生命周期钩子、iframe 事件回传和按钮前置校验机制，下载、打印、导出前可以接入权限验证、审计确认或业务二次弹窗。
 - **阅读体验更像产品。** `.doc`、`.docx`、PDF 都保留灰色工作台、白色纸张、居中阅读和自适应缩放；PDF 兼容旋转页和页面 / 目录导航，Excel 会尽量还原图片和自动文本色，避免“内容能打开但不好读”的落差。
 - **明暗主题有边界。** Demo 外壳、Markdown 和代码预览会适配系统暗色模式；PDF、Word、Excel 等带原始版式的内容保持独立纸张或表格背景，避免全局主题污染文档。
@@ -223,7 +225,7 @@ docker run -d \
   --name flyfish-viewer \
   --restart unless-stopped \
   -p 8080:80 \
-  flyfishdev/file-viewer:1.0.20
+  flyfishdev/file-viewer:1.0.21
 ```
 
 访问:
@@ -235,7 +237,7 @@ docker run -d \
 
 ```bash
 pnpm docker:build
-docker run --rm -p 8080:80 flyfishdev/file-viewer:1.0.20
+docker run --rm -p 8080:80 flyfishdev/file-viewer:1.0.21
 ```
 
 ## 使用说明
@@ -249,7 +251,7 @@ docker run --rm -p 8080:80 flyfishdev/file-viewer:1.0.20
 - 如果下载地址本身没有明确扩展名，建议先在业务侧取回文件，再包装成 `File`
 - PPTX 渲染器会尽量还原常见组合图形、旋转/翻转、主题背景、图片裁剪和 EMF 矢量图片；复杂 Office 特效仍建议用真实业务文件做回归
 - OFD、Typst、压缩包、邮件、OLB/DRA、CAD、3D 模型、绘图、EPUB、UMD、PDF、Office、Markdown、音频和代码高亮渲染器都按需异步加载，只有命中格式时才拉取对应代码块；Typst compiler WASM 可通过 `options.typst.compilerWasmUrl` 指向自托管地址，默认仅在打开 `.typ` / `.typst` 时加载
-- `options.watermark` 支持文字或图片水印；`options.toolbar` 可控制下载原文件、打印完整渲染结果和导出 HTML；`options.hooks` 可接收加载/卸载生命周期；`options.beforeOperation` 可在下载、打印、导出前做权限校验；打印按钮会结合当前文件类型、渲染完成状态和导出适配器动态显隐，Word / PDF 会生成完整页面，Excel 等虚拟表格会隐藏打印按钮，避免只打印当前视口或第一页
+- `options.theme` 支持 `light`、`dark`、`system`，默认继续跟随系统；`options.watermark` 支持文字或图片水印；`options.toolbar` 可控制下载原文件、打印完整渲染结果、导出 HTML 和操作栏位置，`toolbar.position` 支持 `auto`、`top`、`bottom-right`，PDF 默认悬浮到右下角以避开自身导航栏；`options.hooks` 可接收加载/卸载生命周期；`options.beforeOperation` 可在下载、打印、导出前做权限校验；打印按钮会结合当前文件类型、渲染完成状态和导出适配器动态显隐，Word / PDF 会生成完整页面，Excel 等虚拟表格会隐藏打印按钮，避免只打印当前视口或第一页
 
 ```ts
 const blob = await response.blob()
