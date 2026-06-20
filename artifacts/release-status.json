@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-20T01:15:38.443Z",
+  "generatedAt": "2026-06-20T01:23:29.358Z",
   "version": "2.0.1",
   "sourcePolicy": "private-complete-original-workspace",
   "openSourcePolicy": "public-open-source-main-repository",
@@ -8,23 +8,23 @@
     "repository": "https://git.flyfish.dev/flyfish-group/file-viewer.git",
     "branch": "main",
     "policy": "private-complete-original-workspace",
-    "authoritativeCommit": "1b152d97a0948ac92e502dd0305bc9cc5ad4a79e",
+    "authoritativeCommit": "eecbce4e6dc7fb4f90949eb61c8bea2970e3e95f",
     "localBranch": "v3",
-    "localCommit": "1b152d97a0948ac92e502dd0305bc9cc5ad4a79e",
+    "localCommit": "eecbce4e6dc7fb4f90949eb61c8bea2970e3e95f",
     "inSync": true,
     "note": "Private Gitea main is the complete original aggregate workspace. The local checkout branch is only the execution context and can be transitional during branch cutover."
   },
   "local": {
     "branch": "v3",
-    "commit": "1b152d97a0948ac92e502dd0305bc9cc5ad4a79e",
-    "shortCommit": "1b152d97",
-    "dirty": true
+    "commit": "eecbce4e6dc7fb4f90949eb61c8bea2970e3e95f",
+    "shortCommit": "eecbce4e",
+    "dirty": false
   },
   "sourceRemote": {
     "url": "https://git.flyfish.dev/flyfish-group/file-viewer.git",
     "branch": "main",
     "ok": true,
-    "hash": "1b152d97a0948ac92e502dd0305bc9cc5ad4a79e",
+    "hash": "eecbce4e6dc7fb4f90949eb61c8bea2970e3e95f",
     "error": ""
   },
   "openSourceMain": {
@@ -43,11 +43,11 @@
       "error": ""
     },
     "inSync": false,
-    "syncMode": "stale",
-    "treeChecked": true,
-    "referenceTree": "96475c20d8b24f35a2366b4e94388f50d3dc0812",
-    "giteeTree": "62b18f03808005d7045f6bcb1c078889de3cdff4",
-    "treeError": "",
+    "syncMode": "unchecked",
+    "treeChecked": false,
+    "referenceTree": "9487fd4e3daca09ed4aa00033f8260e3629863e2",
+    "giteeTree": "",
+    "treeError": "local public repository ad15131e0ee6 does not match GitHub 70dd3a9b5889",
     "reportHashNote": "This status report is generated before it is committed into the open-source main repository, so the observed open-source main hash can trail the metadata-only commit that carries this file. Gitee can intentionally use a shallow snapshot commit; inSync is true when the file tree matches even if commit hashes differ. Use pnpm audit:ecosystem-status for live remote heads."
   },
   "githubRelease": {
@@ -325,8 +325,7 @@
     }
   ],
   "gaps": [
-    "local source worktree has uncommitted changes",
-    "open-source main Gitee repository tree 62b18f038080 differs from GitHub tree 96475c20d8b2",
+    "open-source main Gitee repository 8ddb952be08d differs from GitHub 70dd3a9b5889 (local public repository ad15131e0ee6 does not match GitHub 70dd3a9b5889)",
     "GitHub Release v2.0.1 missing",
     "core Gitee repository missing",
     "vue3 Gitee repository missing",
@@ -339,11 +338,10 @@
     "svelte Gitee repository missing"
   ],
   "gapSummary": {
-    "total": 12,
+    "total": 11,
     "externalBlockers": 11,
-    "localActionable": 1,
+    "localActionable": 0,
     "byChannel": {
-      "source-worktree": 1,
       "gitee": 10,
       "github-release": 1
     },
@@ -351,25 +349,15 @@
       "gitee",
       "github-release"
     ],
-    "localActionableChannels": [
-      "source-worktree"
-    ]
+    "localActionableChannels": []
   },
   "gapDetails": [
     {
-      "id": "source-worktree-local-source-worktree-has-uncommitted-changes",
-      "channel": "source-worktree",
-      "scope": "local",
-      "externalBlocker": false,
-      "message": "local source worktree has uncommitted changes",
-      "nextAction": "Commit or clean the local source worktree, then rerun the release audit."
-    },
-    {
-      "id": "gitee-open-source-main-gitee-repository-tree-62b18f038080-differs-from-github-tree-96475c20d8b2",
+      "id": "gitee-open-source-main-gitee-repository-8ddb952be08d-differs-from-github-70dd3a9b5889-local-publ",
       "channel": "gitee",
       "scope": "public-mirror",
       "externalBlocker": true,
-      "message": "open-source main Gitee repository tree 62b18f038080 differs from GitHub tree 96475c20d8b2",
+      "message": "open-source main Gitee repository 8ddb952be08d differs from GitHub 70dd3a9b5889 (local public repository ad15131e0ee6 does not match GitHub 70dd3a9b5889)",
       "nextAction": "Run `pnpm public:gitee:snapshot -- --push --confirm-rewrite-history` to publish a shallow Gitee mirror with the same file tree."
     },
     {
