@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-20T14:39:38.954Z",
+  "generatedAt": "2026-06-20T14:52:45.169Z",
   "version": "2.0.6",
   "sourcePolicy": "private-complete-original-workspace",
   "openSourcePolicy": "public-open-source-main-repository",
@@ -32,7 +32,7 @@
       "url": "https://github.com/flyfish-dev/file-viewer",
       "branch": "main",
       "ok": true,
-      "hash": "76302c6fc606e7c29282cdef1a851af770b17e52",
+      "hash": "8f8724253ef87a1457b003e93e53ecd8a1cb092c",
       "error": ""
     },
     "gitee": {
@@ -45,20 +45,20 @@
     "inSync": false,
     "syncMode": "stale",
     "treeChecked": true,
-    "referenceTree": "f124261a7e5f8556d5a25971d1057778528c37da",
+    "referenceTree": "6bd6840bb8c01549c39ae0954aebe878a7e1fa48",
     "giteeTree": "62b18f03808005d7045f6bcb1c078889de3cdff4",
     "treeError": "",
     "reportHashNote": "This status report is generated before it is committed into the open-source main repository, so the observed open-source main hash can trail the metadata-only commit that carries this file. Gitee can intentionally use a shallow snapshot commit; inSync is true when the file tree matches even if commit hashes differ. Use pnpm audit:ecosystem-status for live remote heads."
   },
   "githubRelease": {
-    "ok": false,
+    "ok": true,
     "tag": "v2.0.6",
-    "url": "",
-    "assetCount": 0,
-    "hasManifest": false,
-    "hasStatus": false,
-    "hasSchema": false,
-    "error": "release not found"
+    "url": "https://github.com/flyfish-dev/file-viewer/releases/tag/v2.0.6",
+    "assetCount": 21,
+    "hasManifest": true,
+    "hasStatus": true,
+    "hasSchema": true,
+    "error": ""
   },
   "componentRepositories": [
     {
@@ -331,31 +331,16 @@
       "error": ""
     }
   ],
-  "gaps": [
-    "GitHub Release v2.0.6 missing"
-  ],
+  "gaps": [],
   "gapSummary": {
-    "total": 1,
-    "externalBlockers": 1,
+    "total": 0,
+    "externalBlockers": 0,
     "localActionable": 0,
-    "byChannel": {
-      "github-release": 1
-    },
-    "externalBlockerChannels": [
-      "github-release"
-    ],
+    "byChannel": {},
+    "externalBlockerChannels": [],
     "localActionableChannels": []
   },
-  "gapDetails": [
-    {
-      "id": "github-release-github-release-v2.0.6-missing",
-      "channel": "github-release",
-      "scope": "release-assets",
-      "externalBlocker": true,
-      "message": "GitHub Release v2.0.6 missing",
-      "nextAction": "Upload the missing GitHub Release metadata or artifact and rerun verify:github-release-assets."
-    }
-  ],
+  "gapDetails": [],
   "nextActions": [
     "Run `npm login` / passkey in an interactive terminal, then `pnpm release:ecosystem:publish`.",
     "After npm publish, run `pnpm verify:npm-registry-release`."
