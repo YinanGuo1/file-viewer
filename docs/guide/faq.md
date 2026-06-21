@@ -96,13 +96,21 @@ const file = new File([blobOrBuffer], 'report.xlsx')
 
 ## Excalidraw 和 draw.io 是怎么预览的
 
-`.excalidraw` 走官方 `@excalidraw/excalidraw` 包的 `exportToSvg`，`.drawio` / `.dio` 走官方 diagrams.net `GraphViewer`。组件不会手写绘图格式解析器，只负责按需加载第三方开源能力、挂载预览容器和显示错误提示。
+`.excalidraw` 走官方 `@excalidraw/excalidraw` 包的 `exportToSvg`，`.drawio` / `.dio` 默认使用随 viewer assets 分发的官方 diagrams.net `GraphViewer` 离线预览。项目会在加载 `vendor/drawio/viewer-static.min.js` 前，把 styles、shapes、stencils、img、mxgraph 和 math 路径全部指向本地 `vendor/drawio/`，不会访问 diagrams.net 公网脚本或公共 CDN。官方 viewer 加载失败、超时，或显式设置 `options.drawing.preferOfficial = false` 时，才会回退到内置 SVG 安全预览。
+
+diagrams.net 官方仓库没有维护最新 npm viewer 包；官方文档推荐的离线集成方式就是复制仓库里的 `viewer-static.min.js` 自托管。项目内置的是官方 `v30.2.5` release 的 viewer 文件和配套资源，不使用已经滞后的第三方 `drawio-offline` 包。
 
 ## 压缩包能预览到什么程度
 
 压缩包走 `libarchive.js` 的 WASM Worker，支持 ZIP、7z、RAR、TAR、GZIP、BZIP2、XZ、CAB、ISO、JAR、APK、CBZ/CBR 等入口。组件先读取目录，用户点击内部文件后才按需解压，避免一次性把大包展开到主线程。
 
-内部文件会继续复用统一预览器，所以压缩包里的 PDF、Office、Markdown、代码、图片、邮件或嵌套压缩包都可以在体积限制内打开。私有化部署默认会先尝试当前部署 base 下的 `vendor/libarchive/worker-bundle.js`；如果手机 WebView、本地临时服务器、MIME 或 CSP 导致 Worker 初始化超时，还会切换到 ZIP/TAR/GZIP 兼容模式。只有静态目录、CDN 路径或 WASM 位置特殊时，才需要通过 `options.archive.workerUrl` / `options.archive.wasmUrl` 指定路径。
+内部文件会继续复用统一预览器，所以压缩包里的 PDF、Office、Markdown、代码、图片、邮件或嵌套压缩包都可以在体积限制内打开。私有化部署默认会先尝试当前部署 base 下的 `vendor/libarchive/worker-bundle.js`；如果手机 WebView、本地临时服务器、MIME 或 CSP 导致 Worker 初始化超时，还会切换到 ZIP/TAR/GZIP 兼容模式。只有静态目录或 WASM 位置特殊时，才需要通过 `options.archive.workerUrl` / `options.archive.wasmUrl` 指定路径。
+
+## 能否完全离线部署，不访问公共 CDN
+
+可以。预览运行时默认不依赖公共 CDN 或第三方在线静态资源。纯 JS / 组件包场景建议执行 `file-viewer-copy-assets`，把 PDF.js worker/CMap/WASM/standard fonts、Draw.io 官方 viewer 资产、CAD WASM、Typst WASM、SQLite WASM、压缩包 worker 和 Office worker 复制到业务静态目录。路径特殊时使用 `options.pdf.*`、`options.drawing.viewerScriptUrl`、`options.cad.*`、`options.typst.*`、`options.data.sqlWasmUrl`、`options.archive.*`、`options.docx.workerUrl`、`options.spreadsheet.workerUrl` 指向自托管资源即可。
+
+Typst 本地 WASM 不可用或浏览器端编译超时时会切换源码预览；Draw.io 官方 viewer 不可用时会切换内置 SVG 预览；地理数据使用离线 SVG 地图；这些链路都不会为了兜底访问外部站点。
 
 ## 邮件和 EDA 文件怎么预览
 
